@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Demoz | Data Science & Analytics Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
+        }
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(to bottom right, transparent 49%, white 50%), 
+                        linear-gradient(to top right, transparent 49%, white 50%);
+            background-size: 100% 50%;
+            background-repeat: no-repeat;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #4f46e5;
+            border: 3px solid white;
+        }
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        .skill-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-600">Daniel Demoz</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                    <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition">Experience</a>
+                    <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition">Projects</a>
+                    <a href="#education" class="text-gray-700 hover:text-indigo-600 transition">Education</a>
+                    <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600 transition">About</a>
+            <a href="#experience" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Experience</a>
+            <a href="#skills" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Projects</a>
+            <a href="#education" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Education</a>
+            <a href="#contact" class="block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition w-full text-center">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Daniel S. Demoz</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Business Intelligence & Data Analytics Consultant</h2>
+                    <p class="text-lg mb-8">15+ years experience turning complex data into actionable business insights. Skilled in Python, SQL, Tableau, Power BI, SAS, and machine learning, improving ROI, reducing costs, and enabling data-driven decisions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">Get In Touch</a>
+                        <a href="#experience" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition">View Experience</a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="flex justify-center">
+                    <div class="bg-white p-1 rounded-full shadow-xl">
+                        <img src="https://github.com/DanielDemoz/Daniel-Demoz-Data-Science-AI-Analytics-Portfolio/blob/main/111.jpeg?raw=true"http://static.photos/technology/640x360/42" alt="Daniel Demoz" class="w-64 h-64 rounded-full object-cover">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Summary</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">About Me</h3>
+                    <p class="text-gray-600 mb-4">Business Intelligence & Data Analytics Consultant with 15+ years of experience turning complex data into actionable business insights. Skilled in Python, SQL, Tableau, Power BI, SAS, and machine learning, with a proven track record of improving ROI, reducing operational costs, and enabling data-driven decision-making.</p>
+                    <p class="text-gray-600 mb-4">Experienced in consulting across Canada and Southeast Asia, delivering dashboards, predictive models, and optimization solutions that align with business goals. Currently pursuing a second Master's in Artificial Intelligence at the University of Ottawa, focused on machine learning, optimization, and AI ethics.</p>
+                    <p class="text-gray-600 mb-4">Key projects include TTC Line 1 delay reduction modeling (saving ~$6,600/day), customer segmentation & CLV prediction, and churn prediction models with stakeholder dashboards.</p>
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-flex items-center text-indigo-600 hover:text-indigo-800">
+                            <span>Contact Me</span>
+                            <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-6">Top Skills</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Statistical Data Analysis</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Business Analytics</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Machine Learning</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">XGBoost</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Scikit-learn</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Time-Series</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Linear Programming</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Python</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">SQL</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Tableau</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Power BI</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">SAS</span>
+                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">SPSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Experience</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-gray-200"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-12">
+                    <!-- Item 1 -->
+                    <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2" data-aos="fade-up">
+                        <div class="md:pr-8 md:text-right">
+                            <h3 class="text-xl font-semibold text-gray-800">Centennial College</h3>
+                            <p class="text-gray-600">College Professor</p>
+                            <p class="text-sm text-gray-500">May 2022 - Present (3 years 5 months)</p>
+                            <p class="text-sm text-gray-500">Toronto, Ontario, Canada</p>
+                        </div>
+                        <div class="md:pl-8 md:border-l-2 md:border-gray-200 md:pl-12 mt-4 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                    <li>Delivered post-graduate courses in marketing analytics, database mining, and applied quantitative research</li>
+                                    <li>Taught advanced tools, including SAS, Tableau, XLMiner, and Qualtrics</li>
+                                    <li>Guided students in developing data-driven marketing strategies with a focus on ROI, KPIs, and consumer behavior analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2" data-aos="fade-up">
+                        <div class="md:pr-8 md:text-right md:order-last">
+                            <h3 class="text-xl font-semibold text-gray-800">George Brown College</h3>
+                            <p class="text-gray-600">College Professor</p>
+                            <p class="text-sm text-gray-500">January 2025 - Present (9 months)</p>
+                            <p class="text-sm text-gray-500">Toronto, Ontario, Canada</p>
+                        </div>
+                        <div class="md:pl-8 md:border-l-2 md:border-gray-200 md:pl-12 mt-4 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                    <li>Designed and delivered advanced curriculum in data management and analytics using SQL, Power BI, Tableau, and Excel</li>
+                                    <li>Integrated real-world business challenges into coursework to build strategic thinking and applied analytics skills</li>
+                                    <li>Mentored students on data storytelling, dashboard design, and performance metrics aligned with industry best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2" data-aos="fade-up">
+                        <div class="md:pr-8 md:text-right">
+                            <h3 class="text-xl font-semibold text-gray-800">Computek College</h3>
+                            <p class="text-gray-600">College Instructor</p>
+                            <p class="text-sm text-gray-500">February 2021 - Present (4 years 8 months)</p>
+                            <p class="text-sm text-gray-500">Toronto, Ontario, Canada</p>
+                        </div>
+                        <div class="md:pl-8 md:border-l-2 md:border-gray-200 md:pl-12 mt-4 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                    <li>Taught a wide range of business and accounting courses covering database management, Sage 50, QuickBooks, HR, and workplace readiness</li>
+                                    <li>Focused on career-aligned instruction, supporting practical software proficiency and applied business communication</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- View More Button -->
+                    <div class="text-center mt-12" data-aos="fade-up">
+                        <button id="view-more-exp" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition inline-flex items-center">
+                            <span>View Full Experience</span>
+                            <i data-feather="chevron-down" class="ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Hidden Experience Items -->
+                    <div id="more-experience" class="hidden space-y-12">
+                        <!-- Item 4 -->
+                        <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2">
+                            <div class="md:pr-8 md:text-right md:order-last">
+                                <h3 class="text-xl font-semibold text-gray-800">Seneca College</h3>
+                                <p class="text-gray-600">College Professor</p>
+                                <p class="text-sm text-gray-500">February 2023 - Present (2 years 8 months)</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-gray-200 md:pl-12 mt-4 md:mt-0">
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                        <li>Delivered advanced instruction in data analytics and business systems</li>
+                                        <li>Supported students in developing technical fluency and decision-making confidence</li>
+                                        <li>Provided curriculum input and feedback for evolving analytics and AI course offerings</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 5 -->
+                        <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2">
+                            <div class="md:pr-8 md:text-right">
+                                <h3 class="text-xl font-semibold text-gray-800">BRUKD</h3>
+                                <p class="text-gray-600">Consultant and Trainer</p>
+                                <p class="text-sm text-gray-500">December 2017 - Present (7 years 10 months)</p>
+                                <p class="text-sm text-gray-500">Toronto, Ontario, Canada</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-gray-200 md:pl-12 mt-4 md:mt-0">
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                        <li>Developed full curriculum packages for post-graduate programs in business analytics and operations</li>
+                                        <li>Consulted for colleges in Canada, Thailand, and Indonesia on database development and statistical analysis</li>
+                                        <li>Delivered guest lectures and reviewed over 200 multivariate analyses with international researchers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 6 -->
+                        <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2">
+                            <div class="md:pr-8 md:text-right md:order-last">
+                                <h3 class="text-xl font-semibold text-gray-800">Khon Kaen University</h3>
+                                <p class="text-gray-600">College Instructor</p>
+                                <p class="text-sm text-gray-500">January 2018 - August 2019 (1 year 8 months)</p>
+                                <p class="text-sm text-gray-500">Kranuan, Khon Kaen, Thailand</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-gray-200 md:pl-12 mt-4 md:mt-0">
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                        <li>Prepared course presentations and developed 12 sets of supportive materials tailored to student needs</li>
+                                        <li>Taught students from six different levels using systematic approaches including lessons, discussions, and field trips</li>
+                                        <li>Evaluated student progress and provided individualized learning support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 7 -->
+                        <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2">
+                            <div class="md:pr-8 md:text-right">
+                                <h3 class="text-xl font-semibold text-gray-800">Massawa College of Marine Science</h3>
+                                <p class="text-gray-600">College Instructor and Researcher</p>
+                                <p class="text-sm text-gray-500">September 2012 - July 2016 (3 years 11 months)</p>
+                                <p class="text-sm text-gray-500">Massawa City, Northern Red-Sea, Eritrea</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-gray-200 md:pl-12 mt-4 md:mt-0">
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                        <li>Lectured using systematic plans including lectures, demonstrations, and field assignments</li>
+                                        <li>Designed curriculum and created teaching materials for three courses</li>
+                                        <li>Provided consultation services to the Ministry of Fisheries for research data analysis</li>
+                                        <li>Served as chief editor of the college newspaper for three years</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i data-feather="code" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Technical Skills</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Python (Pandas, NumPy, Scikit-learn)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">SQL & Database Management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Tableau & Power BI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">SAS & SPSS</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Machine Learning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Statistical Analysis</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Teaching & Consulting -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i data-feather="book" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Teaching & Consulting</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Curriculum Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Data Strategy Consulting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Analytics Training</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Performance Measurement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Data Storytelling</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Dashboard Design</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Research & Publications -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i data-feather="file-text" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Research & Publications</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Applied Research</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Multivariate Analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Survey Design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Data Visualization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Academic Writing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-600">Peer Review</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Education & Certifications</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Master's Degree -->
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">University of Ottawa</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Master of Interdisciplinary Artificial Intelligence</p>
+                    <p class="text-sm text-gray-500">Artificial Intelligence</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">Current</p>
+                    </div>
+                </div>
+                
+                <!-- Certificates -->
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i data-feather="bookmark" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Centennial College</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Certificate, Teaching and Learning in Higher Education (TLHE)</p>
+                    <p class="text-sm text-gray-500">September 2022 - December 2023</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-gray-600 mb-2">Postgraduate Certificate, Marketing Research and Analytics</p>
+                        <p class="text-sm text-gray-500">January 2021 - August 2021</p>
+                    </div>
+                </div>
+                
+                <!-- Other Education -->
+                <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i data-feather="graduation-cap" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Other Education</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-gray-600 mb-1">Khon Kaen University</p>
+                            <p class="text-sm text-gray-500">Master's Degree, Research and Development Management</p>
+                            <p class="text-xs text-gray-400">June 2016 - February 2018</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 mb-1">University of Asmara</p>
+                            <p class="text-sm text-gray-500">Bachelor of Arts - BA, Sociology and Social Works</p>
+                            <p class="text-xs text-gray-400">2001 - 2006</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center" data-aos="fade-up">Certifications</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="font-medium text-gray-800">SAS Certified Specialist</h4>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="font-medium text-gray-800">Tableau Desktop Specialist</h4>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="font-medium text-gray-800">Microsoft Power BI Data Analyst</h4>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="font-medium text-gray-800">IBM Data Science Foundations</h4>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="font-medium text-gray-800">Requirements Elicitation and Analysis</h4>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="font-medium text-gray-800">Managing and Analyzing Data in Excel</h4>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="font-medium text-gray-800">Technology for Teaching</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    
+<section id="projects" class="py-20 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-white mb-4">GitHub Projects</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- TTC Project -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-xl font-semibold mb-4">TTC Line 1 Optimization</h3>
+                <p class="text-gray-300 mb-4">Risk-aware scheduling model using Python, PuLP, and Prophet to reduce subway delays (~$6,600/day savings).</p>
+                <a href="https://github.com/DanielDemoz/TTC-Line1-Optimization/blob/main/README.md" target="_blank" class="text-indigo-400 hover:text-indigo-200">View Project →</a>
+            </div>
+            
+            <!-- AI Ethics -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-xl font-semibold mb-4">AI Ethics Case Study</h3>
+                <p class="text-gray-300 mb-4">Exploring ethical design in AI and robotics, with emphasis on accessibility for blind and low-vision travelers.</p>
+                <a href="https://github.com/DanielDemoz/ai-ethics-case-study/blob/main/README.md#1-introduction" target="_blank" class="text-indigo-400 hover:text-indigo-200">View Project →</a>
+            </div>
+            
+            <!-- Customer Churn -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-xl font-semibold mb-4">Customer Churn Analysis</h3>
+                <p class="text-gray-300 mb-4">Machine learning model to predict churn and design retention strategies with stakeholder dashboards.</p>
+                <a href="https://github.com/DanielDemoz/ecommerce-churn-analysis/blob/main/README.md" target="_blank" class="text-indigo-400 hover:text-indigo-200">View Project →</a>
+            </div>
+            
+            <!-- Customer Segmentation -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-xl font-semibold mb-4">Customer Segmentation & CLV</h3>
+                <p class="text-gray-300 mb-4">ML-based customer segmentation and lifetime value prediction using Python and XGBoost for e-commerce.</p>
+                <a href="https://github.com/DanielDemoz/customer-segmentation-clv/blob/main/README.md" target="_blank" class="text-indigo-400 hover:text-indigo-200">View Project →</a>
+            </div>
+            
+            <!-- Diabetes Risk -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="text-xl font-semibold mb-4">Diabetes Risk Factor Analysis</h3>
+                <p class="text-gray-300 mb-4">Comparative study using BRFSS (US) & CCHS (Canada) survey data to analyze diabetes risk prediction models.</p>
+                <a href="https://github.com/DanielDemoz/Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada/blob/main/README.md" target="_blank" class="text-indigo-400 hover:text-indigo-200">View Project →</a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+    <!-- Honors & Publications -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Honors -->
+                <div data-aos="fade-right">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i data-feather="star" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Honors & Awards</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">First Class Honor</h4>
+                            <p class="text-gray-600">Awarded for academic excellence</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Graduated with Honours</h4>
+                            <p class="text-gray-600">Recognized for outstanding academic performance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publications -->
+                <div data-aos="fade-left">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i data-feather="file-text" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Publications</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Factors Affecting the Attitudes of Members' Towards Participation in Fisheries Cooperatives</h4>
+                            <p class="text-gray-600">Dahlak Islands, Eritrea</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Attitudes of Members toward Performance of Fisheries Cooperative in Dahlak Sub-Zone, Eritrea</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i data-feather="mail" class="text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <a href="mailto:asdansi9@yahoo.com" class="text-white hover:underline">asdansi9@yahoo.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i data-feather="linkedin" class="text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" class="text-white hover:underline">linkedin.com/in/daniel-s-demoz</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i data-feather="github" class="text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">GitHub</h4>
+                                <a href="https://github.com/DanDemoz" target="_blank" class="text-white hover:underline">github.com/DanDemoz</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i data-feather="map-pin" class="text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p>Toronto, Ontario, Canada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-md bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-white placeholder-opacity-70">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-md bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-white placeholder-opacity-70">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-md bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-white placeholder-opacity-70"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold">Daniel Demoz</span>
+                    <p class="text-gray-400 mt-2">Data Science & Performance Measurement Professional</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:asdansi9@yahoo.com" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="mail"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://github.com/DanDemoz" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Daniel Demoz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // View more experience toggle
+        document.getElementById('view-more-exp').addEventListener('click', function() {
+            const moreExp = document.getElementById('more-experience');
+            const btnIcon = this.querySelector('i');
+            
+            moreExp.classList.toggle('hidden');
+            
+            if (moreExp.classList.contains('hidden')) {
+                this.innerHTML = '<span>View Full Experience</span><i data-feather="chevron-down" class="ml-2"></i>';
+            } else {
+                this.innerHTML = '<span>Show Less</span><i data-feather="chevron-up" class="ml-2"></i>';
+            }
+            
+            feather.replace();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
