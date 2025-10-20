@@ -48,7 +48,7 @@ Visit the live portfolio: [Your Portfolio URL]
 ## 📞 **Contact**
 - **Email**: asdansi9@yahoo.com
 - **LinkedIn**: [Daniel S. Demoz](https://www.linkedin.com/in/daniel-s-demoz)
-- **GitHub**: [DanDemoz](https://github.com/DanDemoz)
+- **GitHub**: [DanielDemoz](https://github.com/DanielDemoz)
 - **Blog**: [Daniel Demoz Blog](https://danieldemoz.wordpress.com/)
 
 ---
