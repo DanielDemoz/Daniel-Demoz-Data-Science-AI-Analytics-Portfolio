@@ -10,114 +10,293 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary-dark: #0f172a;
+            --primary-blue: #1e40af;
+            --accent-blue: #3b82f6;
+            --light-blue: #dbeafe;
+            --data-green: #10b981;
+            --data-orange: #f59e0b;
+            --data-purple: #8b5cf6;
+            --neutral-50: #f8fafc;
+            --neutral-100: #f1f5f9;
+            --neutral-200: #e2e8f0;
+            --neutral-300: #cbd5e1;
+            --neutral-400: #94a3b8;
+            --neutral-500: #64748b;
+            --neutral-600: #475569;
+            --neutral-700: #334155;
+            --neutral-800: #1e293b;
+            --neutral-900: #0f172a;
+        }
+        
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
+            background: var(--neutral-50);
+            color: var(--neutral-800);
         }
+        
         .gradient-bg {
-            background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 50%, var(--accent-blue) 100%);
+            position: relative;
+            overflow: hidden;
         }
-        .section-divider {
-            height: 100px;
-            background: linear-gradient(to bottom right, transparent 49%, white 50%), 
-                        linear-gradient(to top right, transparent 49%, white 50%);
-            background-size: 100% 50%;
-            background-repeat: no-repeat;
-        }
-        .timeline-item:before {
+        
+        .gradient-bg::before {
             content: '';
             position: absolute;
-            left: -30px;
             top: 0;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #4f46e5;
-            border: 3px solid white;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
-        .skill-pill {
-            transition: all 0.3s ease;
+        
+        .data-pattern {
+            background-image: 
+                linear-gradient(45deg, rgba(59, 130, 246, 0.05) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(59, 130, 246, 0.05) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(59, 130, 246, 0.05) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(59, 130, 246, 0.05) 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
-        .skill-pill:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        
+        .section-divider {
+            height: 120px;
+            background: linear-gradient(135deg, var(--neutral-50) 0%, var(--light-blue) 50%, var(--neutral-50) 100%);
+            position: relative;
         }
-        .project-card {
-            transition: all 0.3s ease;
+        
+        .section-divider::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent-blue) 50%, transparent 100%);
         }
-        .project-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .cert-card {
-            transition: all 0.3s ease;
-        }
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1);
-        }
-        .blog-card {
-            transition: all 0.3s ease;
-        }
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1);
-        }
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        .pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 5px rgba(79, 70, 229, 0.5); }
-            50% { box-shadow: 0 0 20px rgba(79, 70, 229, 0.8); }
-        }
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+        
+        .card-modern {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06),
+                0 0 0 1px rgba(59, 130, 246, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .hover-lift {
+        
+        .card-modern:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(59, 130, 246, 0.1);
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(-5px) rotate(-1deg); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+                border-color: rgba(59, 130, 246, 0.3);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+                border-color: rgba(59, 130, 246, 0.6);
+            }
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .data-grid {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, var(--light-blue) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
         }
-        .hover-lift:hover {
+        
+        .skill-tag:hover {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-blue) 100%);
+            color: white;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(219, 234, 254, 0.3) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--data-green) 0%, var(--accent-blue) 50%, var(--data-purple) 100%);
+        }
+        
+        .nav-modern {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-blue) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue) 0%, var(--data-green) 100%);
+            border-radius: 2px;
+        }
+        
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .data-visualization {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .data-visualization::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-elements::before,
+        .floating-elements::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+            animation: float 20s infinite linear;
+        }
+        
+        .floating-elements::before {
+            top: 10%;
+            left: -100px;
+            animation-delay: 0s;
+        }
+        
+        .floating-elements::after {
+            bottom: 10%;
+            right: -100px;
+            animation-delay: 10s;
+        }
+        
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0) rotate(0deg); }
+            33% { transform: translateX(100px) translateY(-50px) rotate(120deg); }
+            66% { transform: translateX(-50px) translateY(100px) rotate(240deg); }
+            100% { transform: translateX(0) translateY(0) rotate(360deg); }
         }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-md z-50">
+    <nav class="nav-modern fixed w-full shadow-lg z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold text-indigo-600">Daniel Demoz</span>
+                    <span class="text-xl font-bold text-gradient">Daniel Demoz</span>
+                    <span class="ml-2 text-sm text-neutral-500 code-font">Data Scientist</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
-                    <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition">Experience</a>
-                    <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition">Skills</a>
-                    <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition">Projects</a>
-                    <a href="#blog" class="text-gray-700 hover:text-indigo-600 transition">Blog</a>
-                    <a href="#education" class="text-gray-700 hover:text-indigo-600 transition">Education</a>
-                    <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Contact</a>
+                    <a href="#about" class="text-neutral-600 hover:text-accent-blue transition font-medium">About</a>
+                    <a href="#experience" class="text-neutral-600 hover:text-accent-blue transition font-medium">Experience</a>
+                    <a href="#skills" class="text-neutral-600 hover:text-accent-blue transition font-medium">Skills</a>
+                    <a href="#projects" class="text-neutral-600 hover:text-accent-blue transition font-medium">Projects</a>
+                    <a href="#blog" class="text-neutral-600 hover:text-accent-blue transition font-medium">Blog</a>
+                    <a href="#education" class="text-neutral-600 hover:text-accent-blue transition font-medium">Education</a>
+                    <a href="#contact" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-btn" class="text-gray-700">
@@ -139,27 +318,62 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="gradient-bg text-white pt-32 pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <header class="gradient-bg text-white pt-32 pb-20 data-visualization">
+        <div class="floating-elements"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Daniel S. Demoz</h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-blue-100">Data Science & AI Consultant | Educator | International Speaker</h2>
-                    <p class="text-lg mb-6 leading-relaxed">Transforming complex data into strategic insights that drive $6,600+ daily savings and enable data-driven decisions across Canada and Southeast Asia. Expert in machine learning, business analytics, and educational technology.</p>
-                    <div class="bg-white bg-opacity-20 rounded-lg p-4 mb-6">
-                        <p class="text-sm font-medium mb-2">🏆 Key Achievements:</p>
-                        <p class="text-sm">15+ years experience | 500+ students taught | International consulting across 3 countries | Published researcher | Multiple industry certifications</p>
+                    <div class="mb-6">
+                        <span class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium mb-4">
+                            <i data-feather="trending-up" class="w-4 h-4 inline mr-2"></i>
+                            Data Science & AI Expert
+                        </span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                        <span class="text-white">Daniel S.</span><br>
+                        <span class="text-gradient bg-gradient-to-r from-blue-200 to-green-200 bg-clip-text text-transparent">Demoz</span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-semibold mb-6 text-blue-100 leading-relaxed">
+                        Transforming Complex Data into Strategic Insights
+                    </h2>
+                    <p class="text-lg mb-8 leading-relaxed text-blue-50">
+                        Data Science & AI Consultant | Educator | International Speaker<br>
+                        Driving $6,600+ daily savings through data-driven optimization across Canada and Southeast Asia.
+                    </p>
+                    <div class="card-modern rounded-xl p-6 mb-8">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-primary-blue">15+</div>
+                                <div class="text-sm text-neutral-600">Years Experience</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-data-green">500+</div>
+                                <div class="text-sm text-neutral-600">Students Taught</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-data-orange">3</div>
+                                <div class="text-sm text-neutral-600">Countries</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-data-purple">$6.6K</div>
+                                <div class="text-sm text-neutral-600">Daily Savings</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition transform hover:scale-105">Get In Touch</a>
-                        <a href="#projects" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition transform hover:scale-105">View Projects</a>
-                        <a href="#education" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition transform hover:scale-105">View Education</a>
+                        <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg">Get In Touch</a>
+                        <a href="#projects" class="btn-outline text-white border-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-lg font-semibold text-lg">View Projects</a>
                     </div>
                 </div>
                 <div data-aos="fade-left" class="flex justify-center">
-                    <div class="bg-white p-1 rounded-full shadow-xl floating">
-                        <img src="DD.png" alt="Daniel Demoz" class="w-64 h-64 rounded-full object-cover">
-
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-400 rounded-full blur-3xl opacity-30 scale-110"></div>
+                        <div class="relative bg-white p-2 rounded-full shadow-2xl floating pulse-glow">
+                            <img src="DD.png" alt="Daniel Demoz" class="w-72 h-72 rounded-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg">
+                            <i data-feather="code" class="w-8 h-8 text-primary-blue"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,49 +381,85 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-24 bg-white data-pattern">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Summary</h2>
-                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="section-title text-4xl font-bold text-neutral-900 mb-6">Professional Summary</h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">Bridging the gap between complex data analysis and strategic business impact</p>
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">My Story</h3>
-                    <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 mb-6">
-                        <p class="text-indigo-800 font-medium italic">"Data tells a story, but it takes a skilled analyst to make it speak to business leaders in a language they understand."</p>
+                    <h3 class="text-3xl font-bold text-neutral-900 mb-8">My Story</h3>
+                    <div class="card-modern rounded-xl p-6 mb-8 border-l-4 border-accent-blue">
+                        <p class="text-primary-blue font-semibold text-lg italic">"Data tells a story, but it takes a skilled analyst to make it speak to business leaders in a language they understand."</p>
                     </div>
-                    <p class="text-gray-600 mb-4">With 15+ years transforming complex data into strategic insights, I bridge the gap between technical analysis and business impact. My journey spans from marine science research in Eritrea to teaching 500+ students across 4 Canadian colleges, always with one goal: making data accessible and actionable.</p>
-                    <p class="text-gray-600 mb-4">My international consulting experience across Canada and Southeast Asia has delivered measurable results: TTC optimization saving $6,600 daily, customer churn models with 85% accuracy, and operational efficiency improvements of 30%+. I'm currently completing my final studies in AI at University of Ottawa, focusing on ethical AI development and machine learning optimization.</p>
-                    <p class="text-gray-600 mb-4">Beyond the numbers, I believe in the power of education. Whether I'm developing curriculum for post-graduate programs or mentoring students on their first machine learning project, I'm committed to building the next generation of data professionals.</p>
-                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
-                        <h4 class="font-semibold text-gray-800 mb-2">🌍 Beyond Work</h4>
-                        <p class="text-gray-600 text-sm">When not analyzing data or teaching, I enjoy exploring Toronto's diverse food scene, hiking in Ontario's provincial parks, and staying current with the latest AI research. I'm also passionate about making data science education more accessible to underrepresented communities.</p>
+                    <div class="space-y-6 text-neutral-700 leading-relaxed">
+                        <p class="text-lg">With <span class="font-semibold text-primary-blue">15+ years</span> transforming complex data into strategic insights, I bridge the gap between technical analysis and business impact. My journey spans from marine science research in Eritrea to teaching <span class="font-semibold text-data-green">500+ students</span> across 4 Canadian colleges, always with one goal: making data accessible and actionable.</p>
+                        <p class="text-lg">My international consulting experience across Canada and Southeast Asia has delivered measurable results: <span class="font-semibold text-data-orange">TTC optimization saving $6,600 daily</span>, customer churn models with <span class="font-semibold text-data-purple">85% accuracy</span>, and operational efficiency improvements of <span class="font-semibold text-data-green">30%+</span>. I'm currently completing my final studies in AI at University of Ottawa, focusing on ethical AI development and machine learning optimization.</p>
+                        <p class="text-lg">Beyond the numbers, I believe in the power of education. Whether I'm developing curriculum for post-graduate programs or mentoring students on their first machine learning project, I'm committed to building the next generation of data professionals.</p>
+                    </div>
+                    <div class="card-modern rounded-xl p-6 mt-8">
+                        <h4 class="font-bold text-neutral-900 mb-3 flex items-center">
+                            <i data-feather="globe" class="w-5 h-5 mr-2 text-accent-blue"></i>
+                            Beyond Work
+                        </h4>
+                        <p class="text-neutral-600">When not analyzing data or teaching, I enjoy exploring Toronto's diverse food scene, hiking in Ontario's provincial parks, and staying current with the latest AI research. I'm also passionate about making data science education more accessible to underrepresented communities.</p>
                     </div>
                     <div class="mt-8">
-                        <a href="#contact" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                        <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
                             <span>Let's Connect</span>
                             <i data-feather="arrow-right" class="ml-2"></i>
                         </a>
                     </div>
                 </div>
                 <div data-aos="fade-left">
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-6">Top Skills</h4>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Statistical Data Analysis</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Business Analytics</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Machine Learning</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">XGBoost</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Scikit-learn</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Time-Series</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Linear Programming</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Python</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">SQL</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Tableau</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Power BI</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">SAS</span>
-                            <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">SPSS</span>
+                    <div class="card-modern rounded-xl p-8">
+                        <h4 class="text-2xl font-bold text-neutral-900 mb-8">Key Achievements</h4>
+                        <div class="space-y-6">
+                            <div class="metric-card rounded-lg p-6">
+                                <div class="flex items-start">
+                                    <div class="bg-gradient-to-r from-blue-100 to-blue-200 p-3 rounded-full mr-4">
+                                        <i data-feather="users" class="text-primary-blue w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-neutral-900 text-lg">500+ Students Taught</h5>
+                                        <p class="text-neutral-600">Across 4 Canadian colleges in data science and analytics</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="metric-card rounded-lg p-6">
+                                <div class="flex items-start">
+                                    <div class="bg-gradient-to-r from-green-100 to-green-200 p-3 rounded-full mr-4">
+                                        <i data-feather="globe" class="text-data-green w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-neutral-900 text-lg">International Consulting</h5>
+                                        <p class="text-neutral-600">Canada, Thailand, and Indonesia - 3 countries</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="metric-card rounded-lg p-6">
+                                <div class="flex items-start">
+                                    <div class="bg-gradient-to-r from-orange-100 to-orange-200 p-3 rounded-full mr-4">
+                                        <i data-feather="trending-up" class="text-data-orange w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-neutral-900 text-lg">$6,600+ Daily Savings</h5>
+                                        <p class="text-neutral-600">Through TTC optimization project</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="metric-card rounded-lg p-6">
+                                <div class="flex items-start">
+                                    <div class="bg-gradient-to-r from-purple-100 to-purple-200 p-3 rounded-full mr-4">
+                                        <i data-feather="award" class="text-data-purple w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-neutral-900 text-lg">Published Researcher</h5>
+                                        <p class="text-neutral-600">Multiple industry certifications and publications</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -218,30 +468,42 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-50">
+    <section id="experience" class="py-24 bg-neutral-50 data-grid">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Experience</h2>
-                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="section-title text-4xl font-bold text-neutral-900 mb-6">Professional Experience</h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">15+ years of expertise across academia, consulting, and international collaboration</p>
             </div>
             
             <div class="space-y-8">
                 <!-- Current Positions -->
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Centennial College -->
-                    <div class="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex justify-between items-start mb-4">
+                    <div class="card-modern rounded-xl p-8" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between items-start mb-6">
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-800">College Professor</h3>
-                                <p class="text-indigo-600 font-medium">Centennial College</p>
+                                <h3 class="text-2xl font-bold text-neutral-900">College Professor</h3>
+                                <p class="text-primary-blue font-semibold text-lg">Centennial College</p>
                             </div>
-                            <span class="text-sm text-gray-500">May 2022 - Present</span>
+                            <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-medium">May 2022 - Present</span>
                         </div>
-                        <p class="text-gray-600 mb-3">Toronto, Ontario, Canada</p>
-                        <ul class="text-sm text-gray-600 space-y-1">
-                            <li>• Delivered post-graduate courses in marketing analytics and database mining</li>
-                            <li>• Taught advanced tools: SAS, Tableau, XLMiner, and Qualtrics</li>
-                            <li>• Guided students in data-driven marketing strategies and ROI analysis</li>
+                        <p class="text-neutral-600 mb-4 flex items-center">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                            Toronto, Ontario, Canada
+                        </p>
+                        <ul class="text-neutral-700 space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-4 h-4 text-data-green mr-2 mt-1 flex-shrink-0"></i>
+                                <span>Delivered post-graduate courses in marketing analytics and database mining</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-4 h-4 text-data-green mr-2 mt-1 flex-shrink-0"></i>
+                                <span>Taught advanced tools: SAS, Tableau, XLMiner, and Qualtrics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-4 h-4 text-data-green mr-2 mt-1 flex-shrink-0"></i>
+                                <span>Guided students in data-driven marketing strategies and ROI analysis</span>
+                            </li>
                         </ul>
                     </div>
 
