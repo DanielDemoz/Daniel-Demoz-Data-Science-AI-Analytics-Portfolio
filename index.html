@@ -85,6 +85,21 @@
             0%, 100% { box-shadow: 0 0 5px rgba(79, 70, 229, 0.5); }
             50% { box-shadow: 0 0 20px rgba(79, 70, 229, 0.8); }
         }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -100,6 +115,7 @@
                     <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition">Experience</a>
                     <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition">Skills</a>
                     <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition">Projects</a>
+                    <a href="#blog" class="text-gray-700 hover:text-indigo-600 transition">Blog</a>
                     <a href="#education" class="text-gray-700 hover:text-indigo-600 transition">Education</a>
                     <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Contact</a>
                 </div>
@@ -116,6 +132,7 @@
             <a href="#experience" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Experience</a>
             <a href="#skills" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Skills</a>
             <a href="#projects" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Projects</a>
+            <a href="#blog" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Blog</a>
             <a href="#education" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Education</a>
             <a href="#contact" class="block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition w-full text-center">Contact</a>
         </div>
@@ -126,9 +143,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Daniel S. Demoz</h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-4">Data Science & AI Consultant | Educator | International Speaker</h2>
-                    <p class="text-lg mb-6">Transforming complex data into strategic insights that drive $6,600+ daily savings and enable data-driven decisions across Canada and Southeast Asia.</p>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Daniel S. Demoz</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-blue-100">Data Science & AI Consultant | Educator | International Speaker</h2>
+                    <p class="text-lg mb-6 leading-relaxed">Transforming complex data into strategic insights that drive $6,600+ daily savings and enable data-driven decisions across Canada and Southeast Asia. Expert in machine learning, business analytics, and educational technology.</p>
                     <div class="bg-white bg-opacity-20 rounded-lg p-4 mb-6">
                         <p class="text-sm font-medium mb-2">🏆 Key Achievements:</p>
                         <p class="text-sm">15+ years experience | 500+ students taught | International consulting across 3 countries | Published researcher | Multiple industry certifications</p>
@@ -748,7 +765,102 @@
             
         </div>
     </div>
-</section>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest Blog Posts</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Insights in AI, Data Science & Analytics - Exploring interdisciplinary approaches to data-driven solutions</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Blog Post 1: E-commerce Churn Analysis -->
+                <article class="bg-gray-50 p-8 rounded-xl shadow-sm blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">E-commerce Analytics</span>
+                        <span class="text-gray-500 text-sm">October 20, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Interactive E-commerce Churn Analysis Dashboard: Predict, Understand, and Retain Customers</h3>
+                    <p class="text-gray-600 mb-4">In today's online shopping world, keeping customers engaged is more important than ever. But how can businesses know which customers might leave, why they leave, and what strategies can help retain them? This comprehensive analysis explores customer churn prediction using machine learning and interactive dashboards.</p>
+                    <div class="flex items-center justify-between">
+                        <a href="https://danieldemoz.wordpress.com/2025/10/20/interactive-e-commerce-churn-analysis-dashboard-predict-understand-and-retain-customers/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Machine Learning</span>
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Dashboard</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2: Data Into Connection -->
+                <article class="bg-gray-50 p-8 rounded-xl shadow-sm blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Customer Analytics</span>
+                        <span class="text-gray-500 text-sm">October 20, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Turning Data Into Connection: How Businesses Understand You Better</h3>
+                    <p class="text-gray-600 mb-4">This post examines how businesses leverage customer data to enhance relationships and marketing. It highlights the importance of customer segmentation and prediction of customer lifetime value (CLV) to create more personalized and effective business strategies.</p>
+                    <div class="flex items-center justify-between">
+                        <a href="https://danieldemoz.wordpress.com/2025/10/20/turning-data-into-connection-how-businesses-understand-you-better/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Customer Segmentation</span>
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">CLV</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3: Diabetes Predictors -->
+                <article class="bg-gray-50 p-8 rounded-xl shadow-sm blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Healthcare Analytics</span>
+                        <span class="text-gray-500 text-sm">October 20, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Discover Key Diabetes Predictors from U.S. and Canadian Health Data</h3>
+                    <p class="text-gray-600 mb-4">Daniel S. Demoz's project utilizes an interactive dashboard to assess diabetes risk factors using health data from the U.S. and Canada. It reveals key predictors such as high blood pressure, BMI, and lifestyle factors that contribute to diabetes risk.</p>
+                    <div class="flex items-center justify-between">
+                        <a href="https://danieldemoz.wordpress.com/2025/10/20/discover-key-diabetes-predictors-from-u-s-and-canadian-health-data/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Health Data</span>
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Risk Analysis</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4: TTC Predict -->
+                <article class="bg-gray-50 p-8 rounded-xl shadow-sm blog-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Transportation AI</span>
+                        <span class="text-gray-500 text-sm">October 19, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">TTC Predict: Smart Travel for Toronto Commuters</h3>
+                    <p class="text-gray-600 mb-4">If you've ever been stuck on the Toronto subway wondering why your train is delayed, there's finally a smarter way to plan your trip. TTC Predict is a new machine learning solution that helps commuters predict delays and optimize their travel routes.</p>
+                    <div class="flex items-center justify-between">
+                        <a href="https://danieldemoz.wordpress.com/2025/10/19/ttc-predict-smart-travel-for-toronto-commuters/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Machine Learning</span>
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Transportation</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="https://danieldemoz.wordpress.com/" target="_blank" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition inline-flex items-center">
+                    Visit My Blog <i data-feather="external-link" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Project Insights & Documentation Section -->
     <section class="py-20 bg-white">
@@ -830,6 +942,88 @@
                 <a href="https://github.com/DanielDemoz" target="_blank" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition inline-flex items-center">
                     View All GitHub Projects <i data-feather="external-link" class="ml-2"></i>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What Colleagues & Students Say</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4">Testimonials from industry professionals and students</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"Daniel's expertise in data science and his ability to translate complex analytics into actionable business insights is exceptional. His TTC optimization project alone saved our organization thousands daily."</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                            <i data-feather="user" class="text-indigo-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Transportation Executive</h4>
+                            <p class="text-sm text-gray-500">Toronto Transit Commission</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"Professor Demoz transformed my understanding of data analytics. His teaching methods and real-world examples made complex concepts accessible. I now work as a data analyst thanks to his guidance."</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                            <i data-feather="user" class="text-indigo-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Former Student</h4>
+                            <p class="text-sm text-gray-500">Centennial College Graduate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"Daniel's international consulting experience and deep knowledge of both technical and business aspects of data science make him an invaluable partner for any analytics project."</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                            <i data-feather="user" class="text-indigo-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Business Partner</h4>
+                            <p class="text-sm text-gray-500">BRUKD Consulting</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -969,27 +1163,63 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <span class="text-xl font-bold">Daniel Demoz</span>
-                    <p class="text-gray-400 mt-2">Data Science & Performance Measurement Professional</p>
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">Daniel S. Demoz</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Data Science & AI Consultant, Educator, and International Speaker. Transforming complex data into strategic insights that drive measurable business impact across Canada and Southeast Asia.</p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:asdansi9@yahoo.com" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                            <i data-feather="mail" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://github.com/DanDemoz" target="_blank" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://danieldemoz.wordpress.com/" target="_blank" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                            <i data-feather="book-open" class="w-5 h-5"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="mailto:asdansi9@yahoo.com" class="text-gray-400 hover:text-white transition">
-                        <i data-feather="mail"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" class="text-gray-400 hover:text-white transition">
-                        <i data-feather="linkedin"></i>
-                    </a>
-                    <a href="https://github.com/DanDemoz" target="_blank" class="text-gray-400 hover:text-white transition">
-                        <i data-feather="github"></i>
-                    </a>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#experience" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Data Science Consulting</li>
+                        <li>Machine Learning Solutions</li>
+                        <li>Business Analytics Training</li>
+                        <li>Educational Technology</li>
+                        <li>Research Collaboration</li>
+                    </ul>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-                <p>&copy; 2024 Daniel Demoz. All rights reserved.</p>
+            
+            <div class="pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2024 Daniel S. Demoz. All rights reserved.</p>
+                    <div class="flex items-center space-x-4 text-sm text-gray-400">
+                        <span>📍 Toronto, Ontario, Canada</span>
+                        <span>•</span>
+                        <span>🌍 International Consulting</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
