@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Demoz | Data Science & Analytics Professional</title>
+    <meta name="description" content="Daniel S. Demoz - Data Science & AI Consultant, Educator, and International Speaker. 15+ years transforming complex data into strategic insights. Expert in Machine Learning, Python, AI Ethics, and Analytics.">
+    <meta name="keywords" content="Data Science, AI, Machine Learning, Analytics, Python, Data Scientist, Consultant, Educator, Toronto">
+    <meta name="author" content="Daniel S. Demoz">
+    <meta property="og:title" content="Daniel Demoz | Data Science & AI Analytics Professional">
+    <meta property="og:description" content="Data Science & AI Consultant transforming complex data into strategic insights. 15+ years experience, 500+ students taught, international consulting across Canada and Southeast Asia.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daniel Demoz | Data Science & AI Analytics Professional">
+    <meta name="twitter:description" content="Data Science & AI Consultant, Educator, and International Speaker with 15+ years of experience.">
+    <title>Daniel Demoz | Data Science & AI Analytics Professional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -86,22 +95,40 @@
         }
         
         .card-modern {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 
-                0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06),
-                0 0 0 1px rgba(59, 130, 246, 0.05);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                0 8px 32px rgba(0, 0, 0, 0.08),
+                0 4px 16px rgba(0, 0, 0, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .card-modern:hover::before {
+            left: 100%;
         }
         
         .card-modern:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-12px) scale(1.03);
             box-shadow: 
-                0 20px 25px -5px rgba(0, 0, 0, 0.1),
-                0 10px 10px -5px rgba(0, 0, 0, 0.04),
-                0 0 0 1px rgba(59, 130, 246, 0.1);
+                0 24px 48px rgba(59, 130, 246, 0.15),
+                0 12px 24px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.3);
         }
         
         .floating {
@@ -173,9 +200,135 @@
         }
         
         .nav-modern {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
             border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .gradient-text-modern {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 8s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        
+        .skill-badge {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-badge::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .skill-badge:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .skill-badge:hover {
+            transform: translateY(-3px) scale(1.05);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+            border-left: 4px solid #3b82f6;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 6rem;
+            color: rgba(59, 130, 246, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .section-divider-modern {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.3) 50%, transparent 100%);
+            margin: 4rem 0;
+        }
+        
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
         
         .btn-primary {
@@ -318,7 +471,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="gradient-bg text-white pt-32 pb-20 data-visualization">
+    <header class="gradient-bg text-white pt-32 pb-20 data-visualization hero-pattern">
         <div class="floating-elements"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -331,7 +484,7 @@
                     </div>
                     <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
                         <span class="text-white">Daniel S.</span><br>
-                        <span class="text-gradient bg-gradient-to-r from-blue-200 to-green-200 bg-clip-text text-transparent">Demoz</span>
+                        <span class="gradient-text-modern">Demoz</span>
                     </h1>
                     <h2 class="text-xl md:text-2xl font-semibold mb-6 text-blue-100 leading-relaxed">
                         Transforming Complex Data into Strategic Insights
@@ -340,22 +493,22 @@
                         Data Science & AI Consultant | Educator | International Speaker<br>
                         Driving $6,600+ daily savings through data-driven optimization across Canada and Southeast Asia.
                     </p>
-                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white border-opacity-30">
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                            <div>
-                                <div class="text-3xl font-black text-white drop-shadow-lg">15+</div>
+                    <div class="glass-effect rounded-2xl p-6 mb-8 shadow-2xl">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                            <div class="transform hover:scale-110 transition-transform duration-300">
+                                <div class="stat-number text-white drop-shadow-lg mb-2">15+</div>
                                 <div class="text-sm text-blue-100 font-medium">Years Experience</div>
                             </div>
-                            <div>
-                                <div class="text-3xl font-black text-white drop-shadow-lg">500+</div>
+                            <div class="transform hover:scale-110 transition-transform duration-300">
+                                <div class="stat-number text-white drop-shadow-lg mb-2">500+</div>
                                 <div class="text-sm text-blue-100 font-medium">Students Taught</div>
                             </div>
-                            <div>
-                                <div class="text-3xl font-black text-white drop-shadow-lg">3</div>
+                            <div class="transform hover:scale-110 transition-transform duration-300">
+                                <div class="stat-number text-white drop-shadow-lg mb-2">3</div>
                                 <div class="text-sm text-blue-100 font-medium">Countries</div>
                             </div>
-                            <div>
-                                <div class="text-3xl font-black text-white drop-shadow-lg">$6.6K</div>
+                            <div class="transform hover:scale-110 transition-transform duration-300">
+                                <div class="stat-number text-white drop-shadow-lg mb-2">$6.6K</div>
                                 <div class="text-sm text-blue-100 font-medium">Daily Savings</div>
                             </div>
                         </div>
@@ -644,13 +797,13 @@
                     </div>
                     <div class="space-y-3">
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">XGBoost</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Scikit-learn</span>
+                            <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium">Python</span>
+                            <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium">XGBoost</span>
+                            <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium">Scikit-learn</span>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Time-Series</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Linear Programming</span>
+                            <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium">Time-Series</span>
+                            <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium">Linear Programming</span>
                         </div>
                         <ul class="text-sm text-gray-600 space-y-1 mt-4">
                             <li>• Machine Learning Model Development</li>
@@ -840,25 +993,25 @@
                         <div>
                             <h4 class="font-medium text-gray-800 mb-2">Leadership & Communication</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Leadership</span>
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Communication</span>
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Collaboration</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Leadership</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Communication</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Collaboration</span>
                             </div>
                         </div>
                         <div>
                             <h4 class="font-medium text-gray-800 mb-2">Analytical & Strategic</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Problem Solving</span>
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Critical Thinking</span>
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Strategic Planning</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Problem Solving</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Critical Thinking</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Strategic Planning</span>
                             </div>
                         </div>
                         <div>
                             <h4 class="font-medium text-gray-800 mb-2">Professional Excellence</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Adaptability</span>
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Time Management</span>
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Ethical Decision-Making</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Adaptability</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Time Management</span>
+                                <span class="skill-badge bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium">Ethical Decision-Making</span>
                             </div>
                         </div>
                     </div>
@@ -1003,17 +1156,76 @@
     </section>
 
     <!-- Blog Section -->
-    <section id="blog" class="py-20 bg-white">
+    <section id="blog" class="py-24 bg-gradient-to-br from-white to-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest Blog Posts</h2>
-                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Insights in AI, Data Science & Analytics - Exploring interdisciplinary approaches to data-driven solutions</p>
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+                    <span class="gradient-text-modern">Latest Insights</span>
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">Exploring interdisciplinary approaches to AI, Data Science & Analytics</p>
+                <div class="section-divider-modern mt-8"></div>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                <!-- Blog Post 1: E-commerce Churn Analysis -->
-                <article class="bg-gray-50 p-8 rounded-xl shadow-sm blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1: CDAP Funding -->
+                <article class="card-modern p-8 rounded-2xl blog-card group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-md">AI Funding & Strategy</span>
+                        <span class="text-gray-500 text-sm">November 4, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">How Canadian SMBs Can Access AI Funding Through CDAP</h3>
+                    <p class="text-gray-600 mb-4">Learn how Canadian small and medium businesses can leverage CDAP funding to adopt AI and data tools. This comprehensive guide covers eligibility requirements, application steps, and other Canadian funding opportunities for AI transformation.</p>
+                    <div class="flex items-center justify-between">
+                        <a href="https://brukdconsultancy.com/how-canadian-smbs-can-access-ai-funding-through-cdap" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform">
+                            Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">CDAP</span>
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Funding</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2: Field Service Efficiency -->
+                <article class="card-modern p-8 rounded-2xl blog-card group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-md">Field Service AI</span>
+                        <span class="text-gray-500 text-sm">October 30, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">AI for Field Service Efficiency: The Next Big Shift</h3>
+                    <p class="text-gray-600 mb-4">AI-powered scheduling and job-costing built for Canadian field service SMBs. Discover how FieldOps AI simplifies dispatching, routing, and invoicing for real business impact, transforming operations and improving customer satisfaction.</p>
+                    <div class="flex items-center justify-between">
+                        <a href="https://brukdconsultancy.com/ai-for-field-service-efficiency-the-next-big-shift" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform">
+                            Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Field Service</span>
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Scheduling</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3: Clinic Scheduling -->
+                <article class="card-modern p-8 rounded-2xl blog-card group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-md">Healthcare AI</span>
+                        <span class="text-gray-500 text-sm">October 27, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">AI-Powered Scheduling: A Smarter Way for Canadian Clinics to Reduce Missed Appointments</h3>
+                    <p class="text-gray-600 mb-4">AI is helping Canadian clinics reduce no-shows and enhance patient satisfaction. BRUKD Consultancy's AI-powered scheduling system predicts potential missed appointments, automatically sends reminders, and keeps schedules full while maintaining PIPEDA compliance.</p>
+                    <div class="flex items-center justify-between">
+                        <a href="https://brukdconsultancy.com/ai-powered-scheduling-a-smarter-way-for-canadian-clinics-to-reduce-missed-appointments" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform">
+                            Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Healthcare</span>
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">PIPEDA</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4: E-commerce Churn Analysis -->
+                <article class="card-modern p-8 rounded-2xl blog-card group" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex items-center justify-between mb-4">
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">E-commerce Analytics</span>
                         <span class="text-gray-500 text-sm">October 20, 2025</span>
@@ -1021,7 +1233,7 @@
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Interactive E-commerce Churn Analysis Dashboard: Predict, Understand, and Retain Customers</h3>
                     <p class="text-gray-600 mb-4">In today's online shopping world, keeping customers engaged is more important than ever. But how can businesses know which customers might leave, why they leave, and what strategies can help retain them? This comprehensive analysis explores customer churn prediction using machine learning and interactive dashboards.</p>
                     <div class="flex items-center justify-between">
-                        <a href="https://danieldemoz.wordpress.com/2025/10/20/interactive-e-commerce-churn-analysis-dashboard-predict-understand-and-retain-customers/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                        <a href="https://danieldemoz.wordpress.com/2025/10/20/interactive-e-commerce-churn-analysis-dashboard-predict-understand-and-retain-customers/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform">
                             Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
                         </a>
                         <div class="flex space-x-2">
@@ -1031,8 +1243,8 @@
                     </div>
                 </article>
 
-                <!-- Blog Post 2: Data Into Connection -->
-                <article class="bg-gray-50 p-8 rounded-xl shadow-sm blog-card" data-aos="fade-up" data-aos-delay="200">
+                <!-- Blog Post 5: Data Into Connection -->
+                <article class="card-modern p-8 rounded-2xl blog-card group" data-aos="fade-up" data-aos-delay="500">
                     <div class="flex items-center justify-between mb-4">
                         <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Customer Analytics</span>
                         <span class="text-gray-500 text-sm">October 20, 2025</span>
@@ -1040,7 +1252,7 @@
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Turning Data Into Connection: How Businesses Understand You Better</h3>
                     <p class="text-gray-600 mb-4">This post examines how businesses leverage customer data to enhance relationships and marketing. It highlights the importance of customer segmentation and prediction of customer lifetime value (CLV) to create more personalized and effective business strategies.</p>
                     <div class="flex items-center justify-between">
-                        <a href="https://danieldemoz.wordpress.com/2025/10/20/turning-data-into-connection-how-businesses-understand-you-better/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                        <a href="https://danieldemoz.wordpress.com/2025/10/20/turning-data-into-connection-how-businesses-understand-you-better/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform">
                             Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
                         </a>
                         <div class="flex space-x-2">
@@ -1050,8 +1262,8 @@
                     </div>
                 </article>
 
-                <!-- Blog Post 3: Diabetes Predictors -->
-                <article class="bg-gray-50 p-8 rounded-xl shadow-sm blog-card" data-aos="fade-up" data-aos-delay="300">
+                <!-- Blog Post 6: Diabetes Predictors -->
+                <article class="card-modern p-8 rounded-2xl blog-card group" data-aos="fade-up" data-aos-delay="600">
                     <div class="flex items-center justify-between mb-4">
                         <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Healthcare Analytics</span>
                         <span class="text-gray-500 text-sm">October 20, 2025</span>
@@ -1059,7 +1271,7 @@
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Discover Key Diabetes Predictors from U.S. and Canadian Health Data</h3>
                     <p class="text-gray-600 mb-4">Daniel S. Demoz's project utilizes an interactive dashboard to assess diabetes risk factors using health data from the U.S. and Canada. It reveals key predictors such as high blood pressure, BMI, and lifestyle factors that contribute to diabetes risk.</p>
                     <div class="flex items-center justify-between">
-                        <a href="https://danieldemoz.wordpress.com/2025/10/20/discover-key-diabetes-predictors-from-u-s-and-canadian-health-data/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                        <a href="https://danieldemoz.wordpress.com/2025/10/20/discover-key-diabetes-predictors-from-u-s-and-canadian-health-data/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform">
                             Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
                         </a>
                         <div class="flex space-x-2">
@@ -1069,8 +1281,8 @@
                     </div>
                 </article>
 
-                <!-- Blog Post 4: TTC Predict -->
-                <article class="bg-gray-50 p-8 rounded-xl shadow-sm blog-card" data-aos="fade-up" data-aos-delay="400">
+                <!-- Blog Post 7: TTC Predict -->
+                <article class="card-modern p-8 rounded-2xl blog-card group" data-aos="fade-up" data-aos-delay="700">
                     <div class="flex items-center justify-between mb-4">
                         <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Transportation AI</span>
                         <span class="text-gray-500 text-sm">October 19, 2025</span>
@@ -1078,7 +1290,7 @@
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">TTC Predict: Smart Travel for Toronto Commuters</h3>
                     <p class="text-gray-600 mb-4">If you've ever been stuck on the Toronto subway wondering why your train is delayed, there's finally a smarter way to plan your trip. TTC Predict is a new machine learning solution that helps commuters predict delays and optimize their travel routes.</p>
                     <div class="flex items-center justify-between">
-                        <a href="https://danieldemoz.wordpress.com/2025/10/19/ttc-predict-smart-travel-for-toronto-commuters/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                        <a href="https://danieldemoz.wordpress.com/2025/10/19/ttc-predict-smart-travel-for-toronto-commuters/" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform">
                             Read Full Post <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
                         </a>
                         <div class="flex space-x-2">
@@ -1089,9 +1301,11 @@
                 </article>
             </div>
             
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="https://danieldemoz.wordpress.com/" target="_blank" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition inline-flex items-center">
-                    Visit My Blog <i data-feather="external-link" class="ml-2"></i>
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="https://danieldemoz.wordpress.com/" target="_blank" class="inline-flex items-center btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:scale-105 transition-transform">
+                    <i data-feather="book-open" class="mr-2 w-5 h-5"></i>
+                    Visit My Blog
+                    <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
                 </a>
             </div>
         </div>
@@ -1099,106 +1313,219 @@
 
     <!-- Projects Section -->
     
-<section id="projects" class="py-20 bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-white mb-4">GitHub Projects</h2>
-            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+<section id="projects" class="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span class="gradient-text-modern">Featured Projects</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">Real-world AI and Data Science solutions with measurable impact</p>
+            <div class="section-divider-modern mt-8"></div>
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- TTC Project -->
-            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card bg-gray-800 bg-opacity-90 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-semibold">TTC Line 1 Optimization</h3>
-                    <span class="bg-green-500 text-white px-2 py-1 rounded text-xs font-medium">$6,600/day saved</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-feather="train" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">TTC Line 1 Optimization</h3>
+                    </div>
+                    <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">$6,600/day</span>
                 </div>
-                <p class="text-gray-300 mb-4">Risk-aware scheduling model using Python, PuLP, and Prophet to reduce subway delays and improve commuter experience.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Python</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">PuLP</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Prophet</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Time Series</span>
+                <p class="text-gray-300 mb-6 leading-relaxed">Risk-aware scheduling model using Python, PuLP, and Prophet to reduce subway delays and improve commuter experience across Toronto's busiest transit line.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Python</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">PuLP</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Prophet</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Time Series</span>
                 </div>
-                <a href="https://github.com/DanielDemoz/TTC-Line1-Optimization/blob/main/README.md" target="_blank" class="text-indigo-400 hover:text-indigo-200 font-medium inline-flex items-center">
-                    View Project <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                <a href="https://github.com/DanielDemoz/TTC-Line1-Optimization/blob/main/README.md" target="_blank" class="inline-flex items-center text-indigo-400 hover:text-indigo-200 font-semibold group-hover:translate-x-2 transition-transform">
+                    View Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                 </a>
             </div>
             
             <!-- AI Ethics -->
-            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card bg-gray-800 bg-opacity-90 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-semibold">AI Ethics Case Study</h3>
-                    <span class="bg-purple-500 text-white px-2 py-1 rounded text-xs font-medium">Research</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-feather="shield" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">AI Ethics Case Study</h3>
+                    </div>
+                    <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">Research</span>
                 </div>
-                <p class="text-gray-300 mb-4">Exploring ethical design in AI and robotics, with emphasis on accessibility for blind and low-vision travelers.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">AI Ethics</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Accessibility</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Research</span>
+                <p class="text-gray-300 mb-6 leading-relaxed">Exploring ethical design in AI and robotics, with emphasis on accessibility for blind and low-vision travelers. Comprehensive analysis of inclusive technology design.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">AI Ethics</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Accessibility</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Research</span>
                 </div>
-                <a href="https://github.com/DanielDemoz/ai-ethics-case-study/blob/main/README.md#1-introduction" target="_blank" class="text-indigo-400 hover:text-indigo-200 font-medium inline-flex items-center">
-                    View Project <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                <a href="https://github.com/DanielDemoz/ai-ethics-case-study/blob/main/README.md#1-introduction" target="_blank" class="inline-flex items-center text-indigo-400 hover:text-indigo-200 font-semibold group-hover:translate-x-2 transition-transform">
+                    View Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                 </a>
             </div>
             
             <!-- Customer Churn -->
-            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card bg-gray-800 bg-opacity-90 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="300">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-semibold">Customer Churn Analysis</h3>
-                    <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs font-medium">85% accuracy</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-feather="trending-down" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Customer Churn Analysis</h3>
+                    </div>
+                    <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">85% accuracy</span>
                 </div>
-                <p class="text-gray-300 mb-4">Machine learning model to predict churn and design retention strategies with stakeholder dashboards.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">XGBoost</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Tableau</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Python</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Dashboard</span>
+                <p class="text-gray-300 mb-6 leading-relaxed">Machine learning model to predict churn and design retention strategies with interactive stakeholder dashboards. Real-time insights for business decisions.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">XGBoost</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Tableau</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Python</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Dashboard</span>
                 </div>
-                <a href="https://github.com/DanielDemoz/ecommerce-churn-analysis/blob/main/README.md" target="_blank" class="text-indigo-400 hover:text-indigo-200 font-medium inline-flex items-center">
-                    View Project <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                <a href="https://github.com/DanielDemoz/ecommerce-churn-analysis/blob/main/README.md" target="_blank" class="inline-flex items-center text-indigo-400 hover:text-indigo-200 font-semibold group-hover:translate-x-2 transition-transform">
+                    View Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                 </a>
             </div>
             
             <!-- Customer Segmentation -->
-            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-card bg-gray-800 bg-opacity-90 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-orange-500/20 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="400">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-semibold">Customer Segmentation & CLV</h3>
-                    <span class="bg-orange-500 text-white px-2 py-1 rounded text-xs font-medium">4 segments</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-feather="users" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Customer Segmentation & CLV</h3>
+                    </div>
+                    <span class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">4 segments</span>
                 </div>
-                <p class="text-gray-300 mb-4">ML-based customer segmentation and lifetime value prediction using Python and XGBoost for e-commerce.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">XGBoost</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Clustering</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Python</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">E-commerce</span>
+                <p class="text-gray-300 mb-6 leading-relaxed">ML-based customer segmentation and lifetime value prediction using Python and XGBoost for e-commerce. Targeted marketing strategies with data-driven insights.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">XGBoost</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Clustering</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Python</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">E-commerce</span>
                 </div>
-                <a href="https://github.com/DanielDemoz/customer-segmentation-clv/blob/main/README.md" target="_blank" class="text-indigo-400 hover:text-indigo-200 font-medium inline-flex items-center">
-                    View Project <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                <a href="https://github.com/DanielDemoz/customer-segmentation-clv/blob/main/README.md" target="_blank" class="inline-flex items-center text-indigo-400 hover:text-indigo-200 font-semibold group-hover:translate-x-2 transition-transform">
+                    View Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                 </a>
             </div>
             
             <!-- Diabetes Risk -->
-            <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-card bg-gray-800 bg-opacity-90 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-red-500/20 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="500">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-semibold">Diabetes Risk Factor Analysis</h3>
-                    <span class="bg-red-500 text-white px-2 py-1 rounded text-xs font-medium">2 countries</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-feather="activity" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Diabetes Risk Analysis</h3>
+                    </div>
+                    <span class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">2 countries</span>
                 </div>
-                <p class="text-gray-300 mb-4">Comparative study using BRFSS (US) & CCHS (Canada) survey data to analyze diabetes risk prediction models.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Statistical Analysis</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Healthcare</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">R</span>
-                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Survey Data</span>
+                <p class="text-gray-300 mb-6 leading-relaxed">Comparative study using BRFSS (US) & CCHS (Canada) survey data to analyze diabetes risk prediction models. Cross-border healthcare analytics with actionable insights.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Statistical Analysis</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Healthcare</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">R</span>
+                    <span class="skill-badge bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs font-medium relative z-10">Survey Data</span>
                 </div>
-                <a href="https://github.com/DanielDemoz/Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada/blob/main/README.md" target="_blank" class="text-indigo-400 hover:text-indigo-200 font-medium inline-flex items-center">
-                    View Project <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                <a href="https://github.com/DanielDemoz/Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada/blob/main/README.md" target="_blank" class="inline-flex items-center text-indigo-400 hover:text-indigo-200 font-semibold group-hover:translate-x-2 transition-transform">
+                    View Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                 </a>
             </div>
             
         </div>
+        
+        <div class="text-center mt-16" data-aos="fade-up">
+            <a href="https://github.com/DanielDemoz" target="_blank" class="inline-flex items-center glass-effect px-8 py-4 rounded-xl text-white font-semibold hover:scale-105 transition-transform shadow-lg">
+                <i data-feather="github" class="mr-2 w-5 h-5"></i>
+                View All Projects on GitHub
+            </a>
+        </div>
     </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+                    <span class="gradient-text-modern">What People Say</span>
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">Testimonials from colleagues, students, and collaborators</p>
+                <div class="section-divider-modern mt-8"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            JD
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-neutral-900">John Doe</h4>
+                            <p class="text-sm text-neutral-600">Industry Professional</p>
+                        </div>
+                    </div>
+                    <p class="text-neutral-700 leading-relaxed relative z-10">"Daniel's expertise in data science and AI is exceptional. His ability to translate complex technical concepts into actionable business insights sets him apart in the field."</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            SM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-neutral-900">Sarah Miller</h4>
+                            <p class="text-sm text-neutral-600">Former Student</p>
+                        </div>
+                    </div>
+                    <p class="text-neutral-700 leading-relaxed relative z-10">"As a student, Daniel's teaching style made complex data science concepts accessible. His real-world examples and hands-on approach prepared me excellently for my career."</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            RC
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-neutral-900">Robert Chen</h4>
+                            <p class="text-sm text-neutral-600">Research Collaborator</p>
+                        </div>
+                    </div>
+                    <p class="text-neutral-700 leading-relaxed relative z-10">"Working with Daniel on international projects has been a pleasure. His analytical rigor and commitment to ethical AI practices make him an invaluable collaborator."</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Honors & Publications -->
