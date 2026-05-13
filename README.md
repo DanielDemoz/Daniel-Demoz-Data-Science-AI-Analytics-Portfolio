@@ -1,52 +1,36 @@
-# Daniel S. Demoz - Data Science & AI Analytics Portfolio
+# Daniel S. Demoz — professional site
 
-Professional portfolio website showcasing expertise in Data Science, AI, and Analytics.
+Executive-style portfolio: practical AI and analytics leadership, teaching, and independent advisory ([BRUKD Consultancy](https://brukdconsultancy.com/)). Static HTML with Tailwind (CDN), Feather icons, and light AOS motion.
 
-## Overview
+## What’s on the site
 
-This portfolio features professional experience, projects, blog posts, and achievements across 20+ years in data science, teaching, and consulting.
+- **Hero & credibility** — positioning, portrait, and a compact trust strip (colleges, practice, cloud context, regions).
+- **Bio** — how classroom, client, and consulting work fit together; readiness, ownership, and evidence without hype.
+- **Impact** — curated outcome cards with context (not floating metrics alone).
+- **Focus** — six service-style areas (readiness, analytics strategy, KPI architecture, grounded adoption, executive education, SMB advisory).
+- **Experience** — expanded BRUKD and Ontario colleges roles; earlier career compressed.
+- **Insights** — five featured articles (links to the consultancy blog).
+- **Projects** — four featured builds plus a secondary list of experiments and demos.
+- **Education** — Ottawa MIA emphasis; earlier credentials summarized.
+- **Contact** — minimal layout and inquiry form.
 
-## Sections
+## Stack
 
-- **About**: Professional summary and background
-- **Experience**: 20+ years of teaching, consulting, and government experience
-- **Skills**: Technical expertise in Python, Machine Learning, SQL, Tableau, Power BI, SAS
-- **Projects**: GitHub projects with real-world impact including TTC optimization, customer churn analysis, and AI ethics research
-- **Blog**: Latest insights from WordPress blog and BRUKD Consultancy
-- **Education**: Academic credentials and professional certifications
-- **Contact**: Professional contact information
+- HTML5, embedded CSS design tokens, [Tailwind CSS](https://tailwindcss.com/) (CDN)
+- [AOS](https://michalsnik.github.io/aos/) for subtle scroll reveals
+- [Feather](https://feathericons.com/) icons
 
-## Key Achievements
+## Local preview
 
-- 20+ years of experience in data science, analytics, and teaching
-- 500+ students taught across 4 Canadian colleges
-- International consulting across Canada, Thailand, and Indonesia
-- $6,600+ daily savings through TTC optimization project
-- Published researcher with multiple industry certifications
-
-## Technologies
-
-- HTML5, CSS3, Tailwind CSS
-- AOS (Animate On Scroll) for animations
-- Feather Icons
-- Responsive mobile-first design
-
-## Features
-
-- Fully responsive design
-- Professional animations and transitions
-- Blog integration with WordPress and BRUKD Consultancy
-- Contact form functionality
-- SEO optimized
-- Modern, clean design inspired by BRUKD Consultancy aesthetic
+Open `index.html` in a browser, or serve the folder with any static server (e.g. `npx serve`).
 
 ## Contact
 
-- Email: asdansi9@yahoo.com
+- Email: asdansi9@gmail.com
 - LinkedIn: [Daniel S. Demoz](https://www.linkedin.com/in/daniel-s-demoz)
 - GitHub: [DanielDemoz](https://github.com/DanielDemoz)
-- Blog: [Daniel Demoz Blog](https://danieldemoz.wordpress.com/)
+- Writing: [BRUKD insights](https://brukdconsultancy.com/insights.html) · [WordPress](https://danieldemoz.wordpress.com/)
 
 ---
 
-Data Science & AI Consultant | Educator | International Speaker
+Professor of business analytics · AI and analytics advisor · Toronto
