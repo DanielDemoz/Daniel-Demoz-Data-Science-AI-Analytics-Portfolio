@@ -1,4 +1,4 @@
-# Daniel S. Demoz — professional site
+# Daniel S. Demoz — professional site (`Daniel_Demoz_Bio`)
 
 Executive-style portfolio: practical AI and analytics leadership, teaching, and independent advisory ([BRUKD Consultancy](https://brukdconsultancy.com/)). Static HTML with Tailwind (CDN), Feather icons, and light AOS motion.
 
