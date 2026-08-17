@@ -11,7 +11,7 @@ Executive-style portfolio: practical AI and analytics leadership, teaching, and 
 - **Experience** — independent practice and Ontario colleges roles; earlier career compressed.
 - **Insights** — five featured articles (links to the consultancy blog).
 - **Projects** — four featured builds plus a secondary list of experiments and demos.
-- **Education** — Ottawa MIA emphasis; earlier credentials summarized.
+- **Education** — University of Ottawa MIA (completed), selected coursework, earlier credentials summarized.
 - **Contact** — minimal layout and inquiry form.
 
 ## Stack
