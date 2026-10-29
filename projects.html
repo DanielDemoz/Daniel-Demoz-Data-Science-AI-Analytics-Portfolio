@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All projects | Daniel S. Demoz</title>
+  <meta name="description" content="All public projects by Daniel S. Demoz: AI governance tools, machine learning models, AI automation prototypes, Power BI and SQL work.">
+  <meta name="author" content="Daniel S. Demoz">
+  <meta name="theme-color" content="#172b38">
+  <link rel="canonical" href="https://danieldemoz.com/projects">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="All projects | Daniel S. Demoz">
+  <meta property="og:description" content="AI governance tools, machine learning models, AI automation prototypes, Power BI and SQL work.">
+  <meta property="og:url" content="https://danieldemoz.com/projects">
+  <meta property="og:image" content="https://danieldemoz.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23172b38'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23d7a47b'%3EDD%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #172b38; --navy-2: #1f3a49; --navy-3: #10212b;
+      --ink: #1e2b33; --muted: #566670; --paper: #f5f2ec; --white: #fff;
+      --line: #ddd8ce; --line-2: #e9e4db;
+      --copper: #b87548; --copper-dark: #8f512e; --copper-light: #d7a47b; --soft-copper: #f6ece2;
+      --soft-blue: #eaf0f2;
+      --radius: 16px; --shadow: 0 16px 40px rgba(23,43,56,.08); --max: 1140px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--copper); outline-offset: 3px; border-radius: 4px; }
+    h1, h2, h3, .display { font-family: Manrope, "DM Sans", sans-serif; letter-spacing: -.03em; line-height: 1.15; margin: 0; }
+    h2 { font-size: clamp(1.85rem, 3vw, 2.6rem); margin: .3rem 0 1rem; }
+    h3 { font-size: 1.18rem; margin-bottom: .5rem; }
+    p { margin: 0 0 1rem; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .section { padding: 92px 0; border-bottom: 1px solid var(--line); }
+    .section.white { background: var(--white); }
+    .section.blue { background: var(--soft-blue); }
+    .eyebrow { color: var(--copper-dark); text-transform: uppercase; letter-spacing: .16em; font-size: .74rem; font-weight: 700; margin: 0 0 .7rem; }
+    .section-head { max-width: 740px; margin: 0 auto 46px; text-align: center; }
+    .section-head p { color: var(--muted); font-size: 1.05rem; }
+    .small { font-size: .85rem; }
+    .skip { position: absolute; left: -999px; top: 8px; background: #fff; padding: 8px 12px; z-index: 50; }
+    .skip:focus { left: 8px; }
+
+    /* Nav */
+    .nav { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.95); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav-inner { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { text-decoration: none; font: 800 1.05rem Manrope, sans-serif; letter-spacing: -.03em; white-space: nowrap; color: var(--navy); }
+    .brand small { display: block; color: var(--muted); font: 600 .64rem "DM Sans", sans-serif; letter-spacing: .14em; text-transform: uppercase; margin-top: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { text-decoration: none; font-size: .88rem; font-weight: 600; color: #465761; }
+    .nav-links a:hover { color: var(--copper-dark); }
+    .nav-links .nav-cta { background: var(--navy); color: #fff; padding: 10px 16px; border-radius: 8px; }
+    .nav-links .nav-cta:hover { background: var(--navy-2); color: #fff; }
+    .menu-toggle { display: none; background: transparent; border: 1px solid var(--line); padding: 8px 12px; border-radius: 8px; color: var(--navy); font: 600 .9rem "DM Sans", sans-serif; cursor: pointer; }
+
+    /* Hero */
+    .hero { position: relative; background: var(--navy); color: #fff; padding: 92px 0 84px; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px); background-size: 22px 22px; mask-image: linear-gradient(90deg, transparent 0%, #000 55%, #000 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%, #000 100%); pointer-events: none; }
+    .hero::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--copper); }
+    .hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(250px, .7fr); align-items: center; gap: 64px; }
+    .hero .eyebrow { color: var(--copper-light); }
+    .hero h1 { color: #fff; font-size: clamp(2.5rem, 5.4vw, 4.4rem); margin: .4rem 0 1.4rem; max-width: 780px; letter-spacing: -.04em; }
+    .hero h1 span { color: var(--copper-light); }
+    .hero-lead { color: #f1f4f5; font-size: clamp(1.15rem, 2vw, 1.38rem); max-width: 660px; margin-bottom: 1rem; font-weight: 500; }
+    .hero-copy { color: #c7d3d9; max-width: 640px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 46px; padding: 12px 19px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: .92rem; transition: transform .18s ease, background .18s ease, border-color .18s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .facts { margin: 14px 0 16px; display: grid; gap: 8px; }
+    .facts div { display: grid; grid-template-columns: 78px 1fr; gap: 10px; font-size: .9rem; line-height: 1.5; }
+    .facts dt { font-weight: 700; color: var(--copper); text-transform: uppercase; letter-spacing: .06em; font-size: .72rem; padding-top: 3px; }
+    .facts dd { margin: 0; color: var(--muted); }
+    .btn-copper { background: var(--copper-light); color: #172b38; }
+    .btn-copper:hover { background: #e6b991; }
+    .btn-outline-light { border: 1px solid #7f9099; color: #fff; }
+    .btn-outline-light:hover { background: rgba(255,255,255,.08); border-color: #b9c6cc; }
+    .btn-outline { border: 1px solid var(--line); color: var(--navy); background: #fff; }
+    .btn-outline:hover { border-color: var(--copper); }
+    .hero-frameworks { margin-top: 34px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .hero-frameworks span:first-child { color: #9fb0b8; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; margin-right: 6px; }
+    .chip-dark { border: 1px solid rgba(255,255,255,.18); color: #dfe7ea; border-radius: 99px; padding: 4px 11px; font-size: .76rem; font-weight: 600; }
+    .portrait-wrap { max-width: 320px; justify-self: end; width: 100%; }
+    .portrait { border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,.18); background: var(--navy-2); box-shadow: 0 28px 70px rgba(0,0,0,.28); }
+    .portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; }
+    .portrait-note { color: #c7d3d9; font-size: .8rem; padding: 13px 16px; border-top: 1px solid rgba(255,255,255,.12); display: flex; justify-content: space-between; gap: 8px; }
+    .portrait-note strong { color: #fff; font-weight: 600; }
+
+    /* Proof strip */
+    .proof { background: #e9e4db; border-bottom: 1px solid var(--line); }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .proof-item { padding: 28px 22px; border-right: 1px solid #d4cec2; }
+    .proof-item:last-child { border-right: 0; }
+    .proof-value { display: block; font: 800 clamp(1.2rem, 2vw, 1.6rem) Manrope, sans-serif; letter-spacing: -.035em; color: var(--navy); margin-bottom: 4px; }
+    .proof-value em { font-style: italic; }
+    .proof-label { color: var(--muted); font-size: .83rem; line-height: 1.45; }
+
+    /* Cards */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; transition: box-shadow .2s ease; }
+    .card:hover { box-shadow: var(--shadow); }
+    .card p { color: var(--muted); font-size: .95rem; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin: 14px 0 18px; }
+    .tag { border: 1px solid var(--line); background: #fbfaf7; color: #43535d; border-radius: 99px; padding: 4px 10px; font-size: .75rem; font-weight: 600; }
+    .link { color: var(--copper-dark); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .link:hover { color: var(--navy); }
+    .step-num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--navy); color: #fff; font: 700 .8rem Manrope, sans-serif; }
+    .label { color: var(--copper-dark); text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; font-weight: 800; margin: 0 0 .9rem; }
+    .gives { margin: auto 0 0; padding-top: 14px; border-top: 1px solid var(--line-2); font-size: .9rem; color: var(--ink) !important; font-style: italic; }
+    .gives b { font-style: normal; color: var(--copper-dark); font-weight: 700; }
+
+    /* What I do */
+    .depth-now { display: grid; grid-template-columns: 1.2fr .8fr; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 22px; }
+    .depth-now-main { padding: 34px 36px; border-left: 5px solid var(--copper); display: flex; flex-direction: column; }
+    .depth-now-side { background: var(--soft-copper); padding: 34px 32px; }
+    .depth-now-side h4 { font: 700 .74rem "DM Sans", sans-serif; text-transform: uppercase; letter-spacing: .14em; color: var(--copper-dark); margin: 0 0 14px; }
+    .now-pill { display: inline-block; background: var(--copper); color: #fff; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; margin-left: 8px; vertical-align: middle; }
+    .fw-list { list-style: none; padding: 0; margin: 0; }
+    .fw-list li { padding: 10px 0; border-bottom: 1px solid #ead9c8; font-weight: 600; font-size: .93rem; color: var(--ink); }
+    .fw-list li:last-child { border-bottom: 0; }
+    .fw-list li span { display: block; font-weight: 400; color: var(--muted); font-size: .82rem; }
+    .depth-card { display: flex; flex-direction: column; }
+    .depth-card h3 { margin-top: 14px; }
+    .foundation { display: grid; grid-template-columns: 260px 1fr; gap: 28px; align-items: start; background: transparent; border: 1px dashed #cfc8bb; border-radius: var(--radius); padding: 24px 28px; margin-top: 22px; }
+    .foundation h3 { font-size: 1.05rem; margin-top: 12px; }
+    .foundation p { color: var(--muted); font-size: .93rem; }
+
+    /* Work */
+    .featured { background: #fff; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; display: grid; grid-template-columns: .9fr 1.1fr; box-shadow: var(--shadow); }
+    .featured-aside { background: var(--navy); color: #fff; padding: 34px; display: flex; flex-direction: column; gap: 26px; }
+    .featured-aside .eyebrow { color: var(--copper-light); }
+    .featured-aside h3 { color: #fff; font-size: 1.6rem; }
+    .featured-aside p { color: #cdd8dd; font-size: .93rem; }
+    .featured-number { font: 800 clamp(2rem, 4vw, 3rem) Manrope, sans-serif; letter-spacing: -.05em; line-height: 1; }
+    .featured-number-label { color: #cdd8dd; font-size: .8rem; margin-top: 8px; }
+    .shot { border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: #f3f1ec; }
+    .shot-bar { display: flex; gap: 5px; padding: 8px 10px; background: #ece8e1; border-bottom: 1px solid var(--line); }
+    .shot-bar i { width: 8px; height: 8px; border-radius: 50%; background: #cfc8bb; }
+    .shot img { width: 100%; aspect-ratio: 5 / 3; object-fit: cover; object-position: top; }
+    .featured-aside .shot { border-color: rgba(255,255,255,.15); }
+    .featured-aside .shot-bar { background: #223f4f; border-color: rgba(255,255,255,.1); }
+    .featured-aside .shot-bar i { background: #4c6672; }
+    .featured-body { padding: 34px 36px; }
+    .featured-body > p { color: var(--muted); }
+    .pipeline { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0; margin: 22px 0 8px; }
+    .pipe { flex: 1 1 0; min-width: 96px; background: var(--soft-blue); border: 1px solid #d4dfe3; padding: 10px 10px 9px; position: relative; font-size: .76rem; line-height: 1.3; color: var(--navy); font-weight: 700; }
+    .pipe small { display: block; font-weight: 500; color: var(--muted); margin-top: 3px; font-size: .7rem; }
+    .pipe + .pipe { border-left: 0; }
+    .pipe:first-child { border-radius: 10px 0 0 10px; }
+    .pipe:last-child { border-radius: 0 10px 10px 0; background: var(--soft-copper); border-color: #ead9c8; color: var(--copper-dark); }
+    .pipe-caption { font-size: .78rem; color: var(--muted); margin-bottom: 18px; }
+    .check-list { padding: 0; list-style: none; margin: 14px 0 18px; }
+    .check-list li { position: relative; padding-left: 26px; margin: 8px 0; color: var(--muted); font-size: .94rem; }
+    .check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--copper-dark); font-weight: 800; }
+    .lesson { background: var(--paper); border-radius: 12px; padding: 14px 16px; font-size: .92rem; margin-bottom: 20px; }
+    .project-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+    .project-card .shot { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+    .project-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+    .project-body p { font-size: .92rem; }
+    .project-body .focus { font-size: .85rem; color: var(--ink); }
+    .project-body .focus b { color: var(--copper-dark); }
+    .project-links { margin-top: auto; padding-top: 8px; font-size: .92rem; }
+    .case { margin-top: 24px; background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 34px 36px; box-shadow: var(--shadow); }
+    .case-head { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: start; margin-bottom: 22px; }
+    .case-head h3 { font-size: 1.5rem; margin: 0 0 10px; }
+    .case-head p { color: var(--muted); margin: 0 0 10px; }
+    .case h4 { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--copper-dark); margin: 0 0 10px; }
+    .case-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin: 0 0 24px; }
+    .case-table th, .case-table td { text-align: left; vertical-align: top; padding: 11px 12px; border-bottom: 1px solid var(--line); }
+    .case-table th { font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: var(--navy); background: var(--paper); }
+    .case-table td { color: var(--muted); }
+    .case-table td:first-child { color: var(--navy); font-weight: 600; width: 46%; }
+    .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+    .rules > div { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+    .rules ul { margin: 0; padding-left: 18px; }
+    .rules li { color: var(--muted); font-size: .9rem; margin: 7px 0; }
+    .rules li b { color: var(--navy); }
+    @media (max-width: 720px) { .case { padding: 24px 20px; } .case-head, .rules { grid-template-columns: 1fr; } .case-table td:first-child { width: auto; } }
+    .disclaimer { font-size: .82rem; color: var(--muted); margin: 22px auto 0; max-width: 820px; text-align: center; }
+
+    /* Method */
+    .method-intro { max-width: 760px; margin: 0 auto 40px; text-align: center; }
+    .method-intro p { color: var(--muted); font-size: 1.05rem; }
+    .lifecycle { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; position: relative; }
+    .life-step { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; position: relative; }
+    .life-step.is-focus { border-color: var(--copper); box-shadow: 0 0 0 3px var(--soft-copper); }
+    .life-step h3 { margin: 14px 0 6px; font-size: 1.1rem; }
+    .life-step .q { color: var(--muted); font-size: .9rem; }
+    .output { margin-top: auto; display: block; background: var(--soft-blue); border-radius: 10px; padding: 10px 12px; font-size: .83rem; color: var(--navy); }
+    .output b { display: block; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--copper-dark); margin-bottom: 2px; }
+    .method-note { text-align: center; font-size: .85rem; color: var(--muted); margin: 22px 0 0; }
+
+    /* Research */
+    .book { display: grid; grid-template-columns: 150px 1fr; gap: 30px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 28px 32px; box-shadow: var(--shadow); margin-bottom: 18px; }
+    .book img { width: 150px; border-radius: 6px; box-shadow: 0 14px 30px rgba(23,43,56,.2); }
+    .book h3 { font-size: 1.5rem; }
+    .book p { color: var(--muted); }
+    .paper { display: grid; grid-template-columns: 52px 1fr; gap: 18px; padding: 24px; background: #fff; border: 1px solid var(--line); border-radius: 16px; }
+    .paper-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 12px; color: var(--copper-dark); background: var(--soft-copper); }
+    .paper-icon svg { width: 24px; height: 24px; }
+    .paper p { color: var(--muted); font-size: .92rem; }
+    .type { color: var(--copper-dark); font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px; }
+    .article { display: flex; flex-direction: column; }
+    .article h3 { font-size: 1.05rem; }
+    .article .link { margin-top: auto; }
+
+    /* Experience */
+    .timeline { border-top: 1px solid var(--line); }
+    .timeline-item { display: grid; grid-template-columns: 200px 1fr; gap: 28px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .timeline-date { color: var(--copper-dark); font-weight: 700; font-size: .85rem; padding-top: 3px; }
+    .timeline-item h3 { font-size: 1.12rem; margin-bottom: 2px; }
+    .timeline-item .org { color: var(--ink); font-weight: 600; font-size: .92rem; margin-bottom: 8px; }
+    .timeline-item ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: .93rem; }
+    .timeline-item li { margin: 4px 0; }
+    .timeline-item p { color: var(--muted); font-size: .93rem; margin: 0; }
+    .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 28px; }
+    .edu-grid div { font-size: .92rem; color: var(--muted); }
+    .edu-grid strong { display: block; color: var(--ink); font-size: .95rem; }
+    .status { display: inline-block; font-size: .72rem; font-weight: 700; color: var(--copper-dark); background: var(--soft-copper); border-radius: 99px; padding: 2px 9px; margin-left: 6px; }
+
+    /* Contact */
+    .contact-panel { position: relative; overflow: hidden; background: var(--navy); color: #fff; border-radius: 24px; padding: clamp(30px, 5vw, 58px); text-align: center; }
+    .contact-panel::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px); background-size: 22px 22px; pointer-events: none; }
+    .contact-panel > * { position: relative; }
+    .contact-panel .eyebrow { color: var(--copper-light); }
+    .contact-panel h2 { color: #fff; }
+    .contact-panel p { color: #cdd8dd; max-width: 640px; margin: 0 auto 24px; }
+    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 11px; }
+    footer { background: var(--navy-3); color: #b9c6cc; padding: 28px 0; font-size: .83rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .footer-links { display: flex; gap: 18px; }
+    footer a { color: #e7edf0; text-decoration: none; }
+    footer a:hover { color: var(--copper-light); }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .nav-links { gap: 14px; }
+      .nav-links a { font-size: .82rem; }
+      .hero-grid { gap: 36px; }
+      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .featured, .depth-now { grid-template-columns: 1fr; }
+      .lifecycle { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 32px, var(--max)); }
+      .section { padding: 64px 0; }
+      .nav-inner { min-height: 62px; }
+      .menu-toggle { display: inline-block; }
+      .nav-links { display: none; position: absolute; top: 62px; left: 0; right: 0; padding: 12px 20px 20px; background: #fff; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 11px 4px; font-size: .96rem; }
+      .nav-links .nav-cta { text-align: center; margin-top: 8px; }
+      .hero { padding: 58px 0 56px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .portrait-wrap { justify-self: start; max-width: 200px; order: -1; }
+      .portrait-note { flex-direction: column; gap: 0; }
+      .proof-grid { grid-template-columns: repeat(2, 1fr); }
+      .proof-item { padding: 20px 14px; border-bottom: 1px solid #d4cec2; }
+      .proof-item:nth-child(2) { border-right: 0; }
+      .proof-item:nth-child(n+3) { border-bottom: 0; }
+      .grid-2, .grid-3, .lifecycle, .edu-grid { grid-template-columns: 1fr; }
+      .depth-now-main, .depth-now-side, .featured-body, .featured-aside { padding: 26px 22px; }
+      .foundation { grid-template-columns: 1fr; gap: 6px; padding: 22px; }
+      .pipe { flex: 1 1 45%; border-left: 1px solid #d4dfe3 !important; border-radius: 0 !important; }
+      .pipeline { gap: 6px; }
+      .pipe { border-radius: 8px !important; }
+      .book { grid-template-columns: 90px 1fr; gap: 18px; padding: 22px; }
+      .book img { width: 90px; }
+      .book h3 { font-size: 1.2rem; }
+      .paper { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 4px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  
+    .phero { background: var(--navy); color: #fff; padding: 72px 0 56px; }
+    .phero h1 { color: #fff; font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 0 0 14px; }
+    .phero p { color: #cdd8dd; max-width: 700px; font-size: 1.05rem; }
+    .phero .eyebrow { color: var(--copper-light); }
+    .jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .jump a { border: 1px solid rgba(255,255,255,.22); color: #e7edf0; border-radius: 99px; padding: 6px 13px; font-size: .82rem; font-weight: 600; text-decoration: none; }
+    .jump a:hover { border-color: var(--copper-light); color: #fff; }
+    .pgroup { padding: 64px 0; }
+    .group-head { margin-bottom: 26px; }
+    .group-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 6px; }
+    .group-head p { color: var(--muted); margin: 0; }
+    .pcard { display: flex; flex-direction: column; }
+    .pcard h3 { font-size: 1.15rem; margin: 0 0 8px; }
+    .pcard p { margin: 0 0 12px; }
+    .pcard .tech { font-size: .8rem; color: var(--muted); margin-top: auto; }
+    .pcard .label { margin-bottom: .6rem; }
+    .pcard .label.is-poc { color: var(--navy); }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="/">Daniel S. Demoz<small>AI governance · responsible AI</small></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/#focus">What I do</a>
+        <a href="/#work">Work</a>
+        <a href="/projects" aria-current="page">All projects</a>
+        <a href="/#method">Method</a>
+        <a href="/#research">Research</a>
+        <a href="/#experience">Experience</a>
+        <a class="nav-cta" href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="phero">
+      <div class="container">
+        <p class="eyebrow">All projects</p>
+        <h1>21 public projects.</h1>
+        <p>AI governance tools, machine learning models, AI automation prototypes, and reporting work. Each project shows its real status: proof of concept, live demo, or code and write-up.</p>
+        <nav class="jump" aria-label="Project groups"><a href="#g1">AI governance and responsible AI</a><a href="#g2">Machine learning and predictive analytics</a><a href="#g3">Applied AI and automation</a><a href="#g4">Business intelligence and SQL</a><a href="#g5">Product prototypes</a></nav>
+      </div>
+    </header>
+
+    <section class="section white pgroup" id="g1">
+      <div class="container">
+        <div class="group-head"><h2>AI governance and responsible AI</h2><p>Tools and research that put governance into practice.</p></div>
+        <div class="grid-3">
+          <article class="card pcard">
+            <p class="label">Hackathon project · April 2026</p>
+            <h3>Public Funding Accountability Platform</h3>
+            <p>Links Canadian charity filings, federal grants, and Alberta open data to find funding loops for review. Every flag traces back to its source. Findings are signals for review, not proof.</p>
+            <p class="tech">PostgreSQL · Node.js · Splink · Claude API</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/evidence-ai-funding-audit/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/evidence-ai-funding-audit" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label is-poc">Proof of concept</p>
+            <h3>AI Governance Assessment</h3>
+            <p>Measures governance readiness across nine areas with fixed scoring rules, a 5 by 5 risk matrix, and a ranked list of gaps.</p>
+            <p class="tech">Next.js · FastAPI · Python</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/ai-governance-assessment/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/ai-governance-assessment" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label is-poc">Proof of concept</p>
+            <h3>AI Vendor Selection Advisor</h3>
+            <p>Helps smaller organizations compare AI tools against their needs, budget, data, and governance requirements, with the trade-offs written out.</p>
+            <p class="tech">Next.js · TypeScript</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/ai-vendor-selection-governance-advisor/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/ai-vendor-selection-governance-advisor" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label is-poc">Proof of concept</p>
+            <h3>AI Opportunity and ROI Assessment</h3>
+            <p>Ranks possible AI use cases by value, feasibility, and risk. Value is shown as a range and risk is scored on its own.</p>
+            <p class="tech">Next.js · TypeScript</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/ai-opportunity-roi-assessment/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/ai-opportunity-roi-assessment" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Write-up</p>
+            <h3>AI Ethics Case Study</h3>
+            <p>An ethical analysis of Tesla&#x27;s Optimus humanoid robot and the metaphors used to describe it.</p>
+            <p class="tech">Ethics analysis</p>
+            <div class="project-links"><a class="link" href="https://github.com/DanielDemoz/ai-ethics-case-study" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section  pgroup" id="g2">
+      <div class="container">
+        <div class="group-head"><h2>Machine learning and predictive analytics</h2><p>Models built end to end, from data preparation to a working demo.</p></div>
+        <div class="grid-3">
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>TTC Predict</h3>
+            <p>Predicts Toronto subway delays from public data, with route options and a station map. Served with FastAPI.</p>
+            <p class="tech">Python · FastAPI · scikit-learn</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/ttc-predict/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/ttc-predict" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>TTC Line 1 Optimization</h3>
+            <p>Risk-aware scheduling for TTC Line 1, using Prophet forecasts and mixed-integer optimization (PuLP).</p>
+            <p class="tech">Prophet · PuLP · Jupyter</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/TTC-Line1-Optimization/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/TTC-Line1-Optimization" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>Toronto Transit Sentiment</h3>
+            <p>Sentiment analysis of public TTC rider feedback using BERT and VADER.</p>
+            <p class="tech">Python · BERT · VADER</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/toronto-transit-sentiment-nlp/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/toronto-transit-sentiment-nlp" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>LoopLens Transit Dashboard</h3>
+            <p>An interactive dashboard of TTC on-time performance, ridership, and delay trends.</p>
+            <p class="tech">Python · Dash · Plotly</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/interactive-transit-dashboard/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/interactive-transit-dashboard" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>Diabetes Risk Prediction</h3>
+            <p>A diabetes risk model that combines the US BRFSS and Canadian CCHS health surveys.</p>
+            <p class="tech">Jupyter · Plotly</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>Customer Lifetime Value and Segmentation</h3>
+            <p>Predicts customer lifetime value, groups customers into segments, and includes an ROI calculator.</p>
+            <p class="tech">Jupyter · scikit-learn</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/customer-segmentation-clv/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/customer-segmentation-clv" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Code and write-up</p>
+            <h3>Customer Churn Analysis</h3>
+            <p>Predicts which customers are likely to leave and groups them into segments.</p>
+            <p class="tech">Python · Streamlit</p>
+            <div class="project-links"><a class="link" href="https://github.com/DanielDemoz/ecommerce-churn-analysis" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section white pgroup" id="g3">
+      <div class="container">
+        <div class="group-head"><h2>Applied AI and automation</h2><p>Working prototypes of agents and operational tools.</p></div>
+        <div class="grid-3">
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>Ontario Insurance Quote Agent</h3>
+            <p>An AI agent that collects Ontario auto insurance quotes across several channels.</p>
+            <p class="tech">Python · Claude Agent SDK · Playwright</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/ontario-quote-agent/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/ontario-quote-agent" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>Customer Engagement Analytics</h3>
+            <p>Customer segments, lifetime value, and churn prediction, with suggested engagement actions.</p>
+            <p class="tech">Streamlit · XGBoost</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/brukd-ai-customer-engagement/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/brukd-ai-customer-engagement" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>FieldOps AI</h3>
+            <p>Scheduling and job costing for HVAC and electrical field service businesses.</p>
+            <p class="tech">Python · Dashboard</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/fieldops-ai/demo.html" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/fieldops-ai" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>Clinic Booking Optimization</h3>
+            <p>Predicts appointment no-shows, sends reminders, and shows a clinic dashboard.</p>
+            <p class="tech">Python · Flask · scikit-learn</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/ai-booking-optimization/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/ai-booking-optimization" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>AI Restaurant Menu</h3>
+            <p>A restaurant ordering interface with a voice-enabled menu assistant.</p>
+            <p class="tech">JavaScript</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/ai-restaurant-menu/public/index.html" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/ai-restaurant-menu" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section  pgroup" id="g4">
+      <div class="container">
+        <div class="group-head"><h2>Business intelligence and SQL</h2><p>Reporting work that turns data into clear numbers for managers.</p></div>
+        <div class="grid-3">
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>Power BI Portfolio</h3>
+            <p>Eight Power BI dashboards across healthcare, finance, construction, retail, and transportation.</p>
+            <p class="tech">Power BI · DAX</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/PowerBI-Portfolio-Daniel-D/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/PowerBI-Portfolio-Daniel-D" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Live demo</p>
+            <h3>SQL Portfolio</h3>
+            <p>Four SQL case studies using window functions, CTEs, and joins.</p>
+            <p class="tech">SQL · PostgreSQL</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/sql-portfolio/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/sql-portfolio" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section white pgroup" id="g5">
+      <div class="container">
+        <div class="group-head"><h2>Product prototypes</h2><p>Front-end builds that show how a product could work before back-end investment.</p></div>
+        <div class="grid-3">
+          <article class="card pcard">
+            <p class="label is-poc">Proof of concept · fictional company</p>
+            <h3>Maple Grove Realty CRM</h3>
+            <p>A front-end CRM prototype for residential real estate lead capture and pipeline tracking. The company name is invented.</p>
+            <p class="tech">JavaScript</p>
+            <div class="project-links"><a class="link" href="https://danieldemoz.github.io/maple-grove-realty-crm/" target="_blank" rel="noopener">Live demo ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/DanielDemoz/maple-grove-realty-crm" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card pcard">
+            <p class="label">Code and write-up</p>
+            <h3>ESL Placement Portal</h3>
+            <p>Listening and speaking assessment, level placement, and lesson unlocking for English learners.</p>
+            <p class="tech">Node.js · JavaScript</p>
+            <div class="project-links"><a class="link" href="https://github.com/DanielDemoz/esl" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <p class="disclaimer" style="margin:28px auto 40px">Proof-of-concept tools are not certified products. They do not replace legal advice, independent validation, or a formal compliance assessment.</p>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p style="margin:0">© 2026 Daniel S. Demoz</p>
+      <div class="footer-links">
+        <a href="mailto:asbdansi9@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/DanielDemoz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://orcid.org/0009-0006-3072-7309" target="_blank" rel="noopener">ORCID</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.menu-toggle');
+      var links = document.getElementById('nav-links');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function () {
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        toggle.textContent = open ? 'Menu' : 'Close';
+        links.classList.toggle('open', !open);
+      });
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
