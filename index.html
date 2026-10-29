@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Old GitHub Pages address: send visitors to the new domain (keeps any #section) */
+    if (location.hostname.endsWith('github.io')) {
+      location.replace('https://www.danieldemoz.com/' + location.hash);
+    }
+  </script>
   <title>Daniel S. Demoz | AI Governance by Design</title>
   <meta name="description" content="Daniel S. Demoz, AI governance practitioner in Toronto. AI policy, AI risk assessment, vendor review, and human oversight, from someone who builds machine learning systems.">
   <meta name="author" content="Daniel S. Demoz">
