@@ -85,6 +85,10 @@
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 46px; padding: 12px 19px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: .92rem; transition: transform .18s ease, background .18s ease, border-color .18s ease; }
     .btn:hover { transform: translateY(-2px); }
+    .facts { margin: 14px 0 16px; display: grid; gap: 8px; }
+    .facts div { display: grid; grid-template-columns: 78px 1fr; gap: 10px; font-size: .9rem; line-height: 1.5; }
+    .facts dt { font-weight: 700; color: var(--copper); text-transform: uppercase; letter-spacing: .06em; font-size: .72rem; padding-top: 3px; }
+    .facts dd { margin: 0; color: var(--muted); }
     .btn-copper { background: var(--copper-light); color: #172b38; }
     .btn-copper:hover { background: #e6b991; }
     .btn-outline-light { border: 1px solid #7f9099; color: #fff; }
@@ -306,6 +310,7 @@
           <div class="hero-actions">
             <a class="btn btn-copper" href="#work">See governance work <span aria-hidden="true">→</span></a>
             <a class="btn btn-outline-light" href="#research">Research and publications</a>
+            <a class="btn btn-outline-light" href="Daniel-Demoz-Resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
           </div>
           <div class="hero-frameworks" aria-label="Frameworks I work with">
             <span>Frameworks</span>
@@ -376,7 +381,7 @@
             <span class="step-num">03</span>
             <h3>Modelling and teaching at depth</h3>
             <p class="label">Predictive analytics, big data, and visualization</p>
-            <p>I have taught neural networks, predictive modelling, big data analytics, and data mining at the postgraduate level. I have also delivered advanced statistical and predictive work for clients, including a lead-scoring model for a real estate firm.</p>
+            <p>I have taught neural networks, predictive modelling, big data analytics, and data mining at the postgraduate level. I have also built predictive models in client work.</p>
             <div class="tag-row"><span class="tag">Neural networks</span><span class="tag">Predictive modelling</span><span class="tag">SAS</span><span class="tag">Power BI</span></div>
             <p class="gives"><b>What it gives my governance work:</b> I can test a model's evidence, and I know when a strong number hides a weak result.</p>
           </article>
@@ -431,6 +436,10 @@
               <li>Organization names in the public dashboard are anonymized.</li>
               <li>Findings are presented as signals for review, not proof of wrongdoing.</li>
             </ul>
+            <dl class="facts">
+              <div><dt>My role</dt><dd>Team lead. I wrote the matching, language model, and validation stages.</dd></div>
+              <div><dt>Limits</dt><dd>A match is a signal for review, not proof of a link or of wrongdoing.</dd></div>
+            </dl>
             <p class="lesson"><strong>Governance lesson:</strong> traceability, clear limits, and review steps need to be designed into the pipeline before any result is shown.</p>
             <div class="hero-actions" style="margin-top:0">
               <a class="btn btn-copper" href="https://danieldemoz.github.io/evidence-ai-funding-audit/" target="_blank" rel="noopener">Open live demo ↗</a>
@@ -443,7 +452,7 @@
           <article class="card project-card">
             <div class="shot"><div class="shot-bar"><i></i><i></i><i></i></div><img src="img/governance.webp" alt="Screenshot of the AI Governance Readiness Assessment" loading="lazy" width="799" height="479"></div>
             <div class="project-body">
-              <p class="label">Independent prototype</p>
+              <p class="label">Proof of concept · AI governance</p>
               <h3>AI Governance Assessment</h3>
               <p>Measures governance maturity across nine dimensions, including accountability, privacy, fairness, and security. It returns the main gaps, their priority, and a roadmap.</p>
               <p class="focus"><b>Governance focus:</b> clear criteria and a practical improvement plan.</p>
@@ -453,7 +462,7 @@
           <article class="card project-card">
             <div class="shot"><div class="shot-bar"><i></i><i></i><i></i></div><img src="img/vendor.webp" alt="Screenshot of the AI Vendor Selection Advisor" loading="lazy" width="799" height="479"></div>
             <div class="project-body">
-              <p class="label">Independent prototype</p>
+              <p class="label">Proof of concept · AI governance</p>
               <h3>AI Vendor Selection Advisor</h3>
               <p>Helps smaller organizations compare AI tools against their needs, budget, data, and governance requirements.</p>
               <p class="focus"><b>Governance focus:</b> documented trade-offs, not a single unexplained answer.</p>
@@ -463,7 +472,7 @@
           <article class="card project-card">
             <div class="shot"><div class="shot-bar"><i></i><i></i><i></i></div><img src="img/roi.webp" alt="Screenshot of the AI Opportunity and ROI Assessment" loading="lazy" width="799" height="479"></div>
             <div class="project-body">
-              <p class="label">Independent prototype</p>
+              <p class="label">Proof of concept · AI governance</p>
               <h3>AI Opportunity and ROI Assessment</h3>
               <p>Ranks possible AI use cases by value, feasibility, and risk. Value is shown as a range, and risk is scored separately, so a high return cannot hide a high risk.</p>
               <p class="focus"><b>Governance focus:</b> keep expected value apart from uncertainty and risk.</p>
@@ -497,7 +506,7 @@
             </div>
           </article>
         </div>
-        <p class="disclaimer">The three AI assessment tools are self-built portfolio prototypes. They are not certified products and do not replace legal advice, independent validation, or a formal compliance assessment.</p>
+        <p class="disclaimer">The three AI assessment tools are proof-of-concept builds. They are not certified products and do not replace legal advice, independent validation, or a formal compliance assessment.</p>
       </div>
     </section>
 
@@ -558,6 +567,10 @@
               <p class="type">SSRN working paper · October 2026</p>
               <h3>Artificial Intelligence Governance Maturity: A Document Analysis of Ontario's Colleges</h3>
               <p>Reviews AI governance across Ontario's 24 publicly funded colleges.</p>
+              <dl class="facts">
+                <div><dt>Method</dt><dd>Document analysis of the governance documents each college has published, with two independent coders.</dd></div>
+                <div><dt>Limit</dt><dd>It shows what colleges publish, not how governance works inside each college.</dd></div>
+              </dl>
               <a class="link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7663619" target="_blank" rel="noopener">Read on SSRN ↗</a>
             </div>
           </article>
@@ -567,6 +580,9 @@
               <p class="type">SSRN paper · August 2026</p>
               <h3>Human Oversight or Automation Bias? Closing a Gap in Canada's Directive on Automated Decision-Making</h3>
               <p>Looks at where human oversight requirements fall short in practice, and how to reduce automation bias.</p>
+              <dl class="facts">
+                <div><dt>Method</dt><dd>Policy analysis of the Directive on Automated Decision-Making and its Algorithmic Impact Assessment (AIA).</dd></div>
+              </dl>
               <a class="link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7313943" target="_blank" rel="noopener">Read on SSRN ↗</a>
             </div>
           </article>
@@ -600,7 +616,6 @@
               <ul>
                 <li>Advise Canadian small and mid-sized organizations on AI governance, vendor selection, policy writing, and staff training.</li>
                 <li>Developed the Reliable AI Adoption Framework and proof-of-concept assessment tools.</li>
-                <li>Built a lead-scoring model for a real estate firm from its CRM data, delivered in a Power BI dashboard.</li>
               </ul>
             </div>
           </article>
@@ -647,6 +662,7 @@
           <p>I am open to roles in AI governance, responsible AI, and AI risk. Email is the best way to reach me.</p>
           <div class="contact-links">
             <a class="btn btn-copper" href="mailto:asbdansi9@gmail.com">asbdansi9@gmail.com</a>
+            <a class="btn btn-outline-light" href="Daniel-Demoz-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
             <a class="btn btn-outline-light" href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" rel="noopener">LinkedIn ↗</a>
             <a class="btn btn-outline-light" href="https://github.com/DanielDemoz" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
